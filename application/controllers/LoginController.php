@@ -59,6 +59,28 @@ class LoginController extends CI_Controller {
 
     }
 
+    public function fbLogin()
+	{
+		$this->load->library('facebook');
+
+		$user = $this->facebook->getUser();
+
+		if ($user) {
+      try {
+      	$data['user_profile'] = $this->facebook->api('/me');
+      } catch (FacebookApiException $e) {
+      	$user = null;
+      }
+		}
+
+		if ($user) {
+    	$data['logout_url'] = site_url('welcome/logout'); // Logs off application
+    } else {
+      $data['login_url'] = $this->facebook->getLoginUrl(array(
+      'redirect_uri' => site_url('welcome/login'),
+      'scope' => array("email") // permissions here
+      ));
+    }
 
     public function register()
     {
@@ -103,10 +125,14 @@ class LoginController extends CI_Controller {
     }
 
     public function logout() {
-
-          $this->session->sess_destroy();
-          $this->db->close();
-          redirect('index', 'refresh');
+      $this->load->library('facebook');
+      // Logs off session from website
+      $this->facebook->destroySession();
+      // Make sure you destory website session as well.
+      redirect('welcome/login');
+      $this->session->sess_destroy();
+      $this->db->close();
+      redirect('index', 'refresh');
     }
 
 }
