@@ -6,7 +6,7 @@ class LoginController extends CI_Controller {
     parent::__construct();
     $this->load->database();
     $this->load->library('session');
-    $this->load->library('encrypt');
+    $this->load->library('encryption');
     $this->load->helper('security');
     $this->load->helper('url');
     $this->load->model('Login');
@@ -102,8 +102,8 @@ class LoginController extends CI_Controller {
             //hash and salt password
             $salt = mt_rand();
             $pwSalt = $salt.$password;
-            $hash = $this->encrypt->sha1($password);
-
+            //$hash = $this->encrypt->sha1($password);
+            $hash = password_hash($password, PASSWORD_DEFAULT);
 
             $data = $this->Login->check($username);
 

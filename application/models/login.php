@@ -8,7 +8,8 @@
 	public function login($username, $password) {
 		$this->db->select('salt, password_hash');
 		$this->db->where('username', $username);
-		$this->db->where('password_hash', $this->encrypt->sha1($password));
+		//$this->db->where('password_hash', $this->encryption->sha1($password));
+		$this->db->where('password_hash', password_hash($password, PASSWORD_DEFAULT));
 		$query = $this->db->get('users', 1);
 		//do hashes in DB
 
