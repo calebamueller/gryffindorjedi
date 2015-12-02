@@ -28,6 +28,23 @@
 <!--        <script src="<?php //echo base_url('assets/js/angular.js')?>"></script>-->
         <script src="assets/js/main.js"></script>
         
+        <!--<script src="application/views/assets/js/main.js"></script>-->
+    
+      <script>
+//        $(document).ready(function() {
+//          $.ajax({
+//            url: "index.php/home/users",
+//            type: 'POST',
+//            dataType:'json',
+//            success: function(results) {
+//              
+//              console.log(results);
+//              
+//            }
+//          });
+//        });
+      </script>
+      
     </head>
     
     <body>
@@ -63,7 +80,7 @@
                     <div ng-view></div>
                   </div>
                     <div class="col-sm-3" id="chat">
-                        <?php //include 'instant_messengr_files/index.html'?>
+                       <?php //include 'instant_messengr_files/index.html'?>
                     </div>
                     <div class="col-sm-12" id="timeline">
                         Timeline
