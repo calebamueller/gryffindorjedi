@@ -13,8 +13,8 @@ class LoginController extends CI_Controller {
   }
 
 
-    public function index(){
-
+    public function index()
+    {
       $loggedin = $this->session->userdata('loggedin');
       $loggedin = FALSE;
       if ($loggedin == FALSE) {
@@ -59,7 +59,7 @@ class LoginController extends CI_Controller {
 
     }
 
-    public function fbLogin()
+  public function fbLogin()
 	{
 		$this->load->library('facebook');
 
@@ -74,10 +74,10 @@ class LoginController extends CI_Controller {
 		}
 
 		if ($user) {
-    	$data['logout_url'] = site_url('welcome/logout'); // Logs off application
+    	$data['logout_url'] = site_url('LoginController/logout'); // Logs off application
     } else {
       $data['login_url'] = $this->facebook->getLoginUrl(array(
-      'redirect_uri' => site_url('welcome/login'),
+      'redirect_uri' => site_url('LoginController/login'),
       'scope' => array("email") // permissions here
       ));
     }
@@ -113,7 +113,7 @@ class LoginController extends CI_Controller {
             }
             else {
               $this->Login->register($username, $hash, $pwSalt, $salt);
-              redirect('login/index', 'refresh');
+              redirect('LoginController/index', 'refresh');
             }
           }
       }
@@ -129,7 +129,7 @@ class LoginController extends CI_Controller {
       // Logs off session from website
       $this->facebook->destroySession();
       // Make sure you destory website session as well.
-      redirect('welcome/login');
+      redirect('LoginController/login');
       $this->session->sess_destroy();
       $this->db->close();
       redirect('index', 'refresh');

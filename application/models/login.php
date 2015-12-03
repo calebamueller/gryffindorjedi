@@ -1,11 +1,13 @@
 <?php class Login extends CI_Model {
 	//active record code igniter
-	function __construct() {
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->database();
 	}
 
-	public function login($username, $password) {
+	public function login($username, $password)
+	{
 		$this->db->select('salt, password_hash');
 		$this->db->where('username', $username);
 		//$this->db->where('password_hash', $this->encryption->sha1($password));
@@ -25,7 +27,8 @@
 		return $query->num_rows();
 	}
 
-	public function register($username, $hash, $pwSalt, $salt) {
+	public function register($username, $hash, $pwSalt, $salt)
+	{
 		$register_query = array(
    				'username' => $username ,
    				'password_hash' => $hash ,
