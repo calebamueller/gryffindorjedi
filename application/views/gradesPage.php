@@ -1,17 +1,3 @@
-<?php
-	$i=0;
-	$terr = array();
-	//print_r($playerTurnList);
-	foreach($territory_status->result() as $row){
-		$terr[$i] = array('game_id' => $row->game_id,
-						'territory' => $row->territory,
-						'owner'		=> $row->owner,
-						'num_units' => $row->num_units
-						);
-		$i++;
-	}
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
