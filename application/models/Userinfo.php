@@ -8,7 +8,7 @@
   public function getUser() {
 	$array=array();
 	
-	$this->db->select('a.class_name');
+	$this->db->select('a.class_name', 'a.instructor');
     	$this->db->from('classes as a');
 	$this->db->join('users as b',"a.class_id = b.class1");
 	$class= $this->db->get();
