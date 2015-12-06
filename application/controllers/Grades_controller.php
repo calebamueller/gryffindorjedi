@@ -9,13 +9,14 @@
 			$data['username'] = '';//teacher username and how are we limiting the teachers to this view?
 			
 			
-			$this->load->database();
+			
 			
 			
   		}
   		
   		public function index()
   		{
+  			$this->load->database();
   			$this->load->model('Grades_model');
   			$this->load->helper('form');
 			$this->load->view('addGrade');
