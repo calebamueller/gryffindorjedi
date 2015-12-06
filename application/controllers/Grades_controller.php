@@ -24,7 +24,7 @@
 		
 		public function returnAssignments($class_id)
 		{
-			this->class_id = $data['class_id'];
+			//this->class_id = $data['class_id'];
 			$resourceInfo = $this->Grades_model->returnAssignments($class_id);
 		}
 		
