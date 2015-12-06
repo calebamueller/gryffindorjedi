@@ -6,6 +6,7 @@
   }
   
   public function getUser() {
+
 	$array=array();
 	
 	$this->db->select('a.class_name, a.instructor');
@@ -18,7 +19,7 @@
 			'class1' => $row
 		);
 	}	
-	$this->db->select('c.class_name');
+	$this->db->select('c.class_name, c.instructor');
 	$this->db->from('classes as c');
 	$this->db->join('users as d', 'c.class_id = d.class2');
 	$class2 = $this->db->get();
@@ -29,7 +30,7 @@
 		);
 	}
 	
-	$this->db->select('e.class_name');
+	$this->db->select('e.class_name, e.instructor');
 	$this->db->from('classes as e');
 	$this->db->join('users as f', 'e.class_id = f.class3');
 	$class3 = $this->db->get();
@@ -40,7 +41,7 @@
 		);
 	}
 
-	$this->db->select('g.class_name');
+	$this->db->select('g.class_name, g.instructor');
 	$this->db->from('classes as g');
 	$this->db->join('users as h', 'g.class_id = h.class4');
 	$class4 = $this->db->get();
@@ -55,6 +56,7 @@
 
 	
     
+>>>>>>> develop
   }
   
   //$this->db->close();
