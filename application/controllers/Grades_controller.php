@@ -8,9 +8,18 @@
 			$data['class_id'] = '';//how are we passing this info?
 			$data['username'] = '';//teacher username and how are we limiting the teachers to this view?
 			
+			
 			$this->load->database();
+			
+			
+  		}
+  		
+  		public function index()
+  		{
+  			$this->load->model('Grades_model');
+  			$this->load->helper('form');
 			$this->load->view('addGrade');
-			$this->load->model('Grades_model');
+  			echo form_submit('mysubmit', 'Submit Post!');
   		}
 		
 		public function returnAssignments($class_id)
