@@ -6,19 +6,36 @@
 				parent::__construct();
 				$this->load->database();
 		}
-
-		$query = $this->db->query("SELECT *  
-									FROM slateDatabase.assignments
-									WHERE (studentID ILIKE '%".$stuID."%')
-									ORDER BY assignmentID DESC");
-									
-		foreach ($query->result_array() as $row)
+		
+		public function returnAssignments($classID)
 		{
-			echo $row['assignmentID'];
-			echo $row['assignmentName'];
-			echo $row['description'];
-			echo $row['grade'];
-			echo $row['pointsPossible'];
+			$this->db->select('ass_name, ass_description, point_possible');
+			$this->db->where('classID', $classID);
+			
+			$query = $this->db->get('assignments');
+			//do hashes in DB
+
+			return $query->num_rows();
 		}
-	}
+
+		public function newAssignment($ass_name, $ass_description, $username, $point_possible)
+		{
+			$newAssignment = array(
+   				'ass_name' => $ass_name ,
+   				'point_possible' => $points_possible,
+   				'ass_description' => $ass_description,
+   				'username' => $username,
+   				'class_id' => $class_id
+			);
+
+			$this->db->insert('assignments', $newAssignment);
+		}
+		
+		public function removeResource($resourceID)
+		{
+			//find out how to remove a tuple with codeIgniter
+		}
+		
+		$this->db->close();
+}
 ?>
