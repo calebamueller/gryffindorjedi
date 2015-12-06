@@ -56,7 +56,6 @@
 
 	
     
->>>>>>> develop
   }
   
   //$this->db->close();
