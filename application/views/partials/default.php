@@ -18,7 +18,11 @@
               <p>{{person.class6.instructor}}</p>
 
               <button class="btn btn-outline">{{ person.class1.class_name }}</button>
-
+              <button class="btn btn-outline">{{ person.class2.class_name }}</button>
+              <button class="btn btn-outline">{{ person.class3.class_name }}</button>
+              <button class="btn btn-outline">{{ person.class4.class_name }}</button>
+              <button class="btn btn-outline">{{ person.class5.class_name }}</button>
+              
             </div>
           </div>
         </div>
