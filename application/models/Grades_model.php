@@ -9,11 +9,8 @@
 		
 		public function returnAssignments($classID)
 		{
-<<<<<<< HEAD
-			$this->db->select('ass_name, ass_description, username, point_possible');
-=======
+
 			$this->db->select('ass_name, ass_description, point_possible');
->>>>>>> master
 			$this->db->where('classID', $classID);
 			
 			$query = $this->db->get('assignments');
