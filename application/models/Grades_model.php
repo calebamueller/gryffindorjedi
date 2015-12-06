@@ -37,6 +37,6 @@
 			//find out how to remove a tuple with codeIgniter
 		}
 		
-		$this->db->close();
+		//$this->db->close();
 }
 ?>
