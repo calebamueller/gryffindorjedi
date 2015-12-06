@@ -17,7 +17,7 @@
               <p>{{person.class6.class_name}}</p> 
               <p>{{person.class6.instructor}}</p>
 
-              <button class="btn btn-outline"><a href="">{{ person.class_name }}</a></button>
+              <button class="btn btn-outline">{{ person.class_name }}</button>
 
             </div>
           </div>
