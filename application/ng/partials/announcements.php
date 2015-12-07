@@ -1,5 +1,5 @@
 
-<form action="Home/announcements" method="POST">
+<form action="index.php/Home/announcements" method="POST">
 <textarea name="announcement" value="" ></textarea>
 <input type='submit' value="Announce!">
 </form>
