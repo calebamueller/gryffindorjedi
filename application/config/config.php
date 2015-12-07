@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://slateproject.me/gryffindorjedi';
-$config['base_url'] = 'localhost:8888/gryffindorjedi';
+$config['base_url'] = 'slateproject.me/gryffindorjedi';
 
 /*
 |--------------------------------------------------------------------------
