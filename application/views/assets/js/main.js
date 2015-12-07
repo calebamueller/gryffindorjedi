@@ -35,8 +35,8 @@ app.factory('IdService', [function($scope) {
   this.getId = function($id) {
     return $scope.classId;
   }
-  
-  return $scope.classId;
+  var $dicks = 'Dicks'
+  return $dicks;
 }]);
 
 app.controller('PageCtrl', function($scope, $location, $http) {
