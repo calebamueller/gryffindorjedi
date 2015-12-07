@@ -117,7 +117,7 @@ class LoginController extends CI_Controller {
         }
         else {
           $this->Login->register($username, $hash, $pwSalt, $salt);
-          redirect('LoginController/index', 'refresh');
+          redirect('Home/index', 'refresh');
         }
       }
     }
