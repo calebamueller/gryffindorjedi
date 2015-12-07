@@ -27,20 +27,20 @@ app.config(['$routeProvider', function($routeProvider) {
        
 }]);
 
-app.factory('IdService', function($scope) {
+app.factory('IdService', [function($scope) {
   this.setId = function($id){
     $scope.classId = $id;
   }
   this.getId = function($id) {
     return $scope.id;
   }
-});
+}]);
 
 app.controller('PageCtrl', function($scope, $location, $http) {
   console.log("Page Controller is GO");
 });
 
-app.controller('PeopleCtrl', function ($scope, $http, $location) {
+app.controller('PeopleCtrl', function ($scope, $http, $location, IdService) {
   $scope.people = []
   $http.get('index.php/home/users')
     .success(function(data) {
