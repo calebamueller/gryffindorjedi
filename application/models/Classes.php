@@ -30,10 +30,14 @@
     return $array;
   }
   
-  public function announce($id, $data) {
+  public function announce($id, $announcement) {
+    
+    $data = array(
+        'announcement' => $announcement
+      );
     
     $this->db->where('class_id', $id);
-    $this->db->update('classes', $data);
+    $this->db->update('classes', $announcment);
     
   }
 }
