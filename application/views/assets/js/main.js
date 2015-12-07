@@ -70,11 +70,13 @@ app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
   var $id = IdService.getId();
   console.log($id);
   console.log('I have the stuff');
+  function load()( {
   $http.get('index.php/home/getclass/'+$id)
           .success(function(data){
           $scope.classes = data;
           console.log(data);
         });
+  });
 });
 
 
