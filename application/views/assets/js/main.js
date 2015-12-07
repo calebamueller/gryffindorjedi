@@ -30,13 +30,13 @@ app.config(['$routeProvider', function($routeProvider) {
 app.factory('IdService', [function($scope) {
   this.setId = function($id){
     $scope.classId = $id;
-    return $scope.id;
+    return $scope.classId;
   }
   this.getId = function($id) {
-    return $scope.id;
+    return $scope.classId;
   }
   
-  return $scope.id;
+  return $scope.classId;
 }]);
 
 app.controller('PageCtrl', function($scope, $location, $http) {
