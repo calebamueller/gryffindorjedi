@@ -101,6 +101,10 @@
 /*    float: right;*/
 }
 
+#item p {
+  font-size: 20px;
+}
+
 #chat {
     height: 500px;
     margin-left: 0;
