@@ -24,7 +24,7 @@ app.config(['$routeProvider', function($routeProvider) {
         .when("/", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
         .when("/home", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
         .when("/class", {templateUrl: "application/ng/partials/class.php", controller: "PageCtrl"})
-        .when("/announcement", {templateUrl: "application/ng/partials/announcements.php", controller: "PageCtrl"}),
+        .when("/announcement", {templateUrl: "application/ng/partials/announcements.php", controller: "PageCtrl"})
         .when("/chat", {templateUrl: "application/ng/partials/chat.php"});
        
 }]);
