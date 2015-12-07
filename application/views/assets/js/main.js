@@ -111,9 +111,9 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
 //    .success(function(data){
 //    console.log(data);
 //  });
-//  $scope.go = function (path) {
-//    $location.path(path);
-//  };
+    $scope.go = function (path) {
+    $location.path(path);
+  };
   
 });
 
