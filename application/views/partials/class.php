@@ -1,9 +1,9 @@
-<div class="col-sm-12" id="class">
+<div class="col-sm-12" id="class" ng-controller="ClassCtrl">
   <div class="col-sm-6" id="left">
     <h2>Due</h2>
     <div class="col-sm-12" id="due">
       <div ng-repeat="c in classes">
-        <h3><script>console.log('bitches')</script><br></h3>
+        <h3><script>{{c.assignments.ass_name}}</script><br></h3>
       </div>
       <span><h3>Homework 1: </h3><p>{{c.assignments.ass_name}}</p><br></span>
       <h3>Homework 2: </h3><p>September 2<br></p>
