@@ -4,7 +4,12 @@
 		public function __construct()
   		{
 			parent::__construct();
-			
+			$this->load->database();
+			$this->load->library(array('session', 'encryption', 'form_validation'));
+			//$this->load->library('encryption');
+			$this->load->helper(array('security', 'url','form'));
+			//$this->load->helper('url');
+			$this->load->model('Loginmod');
   		}
   		
   		public function index()
