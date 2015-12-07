@@ -26,10 +26,12 @@ class Home extends CI_Controller {
       //$this->load->library('form_validation');
       //$this->load->helper('form');
       $data = json_decode(file_get_contents("php://input"));
-      echo $data->announcement;
+      $id = $data->id;
+      $announcement = $data->announcement;
       //$id = $_POST['id'];
-      //$this->load->model('Classes');
-      //$this->db->announce($id, $announcement);
+      $this->load->model('Classes');
+      $this->db->announce($id, $announcement);
+      echo $data;
        
     }
 }
