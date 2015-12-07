@@ -38,18 +38,19 @@ app.controller('PeopleCtrl', function ($scope, $http) {
         $scope.people = data;
         console.log(data);
     });
-});
-
-app.controller('ClassCtrl', function ($scope, $http, $location) {
-    $scope.createUrl = function(event){
+  
+  $scope.createUrl = function(event){
       console.log(event.target.id);
       $scope.id = event.target.id;
-      $http.get('index.php/home/getclass/'+$scope.id)
+    
+  $http.get('index.php/home/getclass/'+$scope.id)
           .success(function(data){
           $scope.classes = data;
           console.log(data);
         });
-  }
+});
+
+app.controller('ClassCtrl', function ($scope, $http, $location) {
   
   $scope.go = function (path) {
     $location.path(path);
