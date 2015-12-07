@@ -5,11 +5,13 @@ class LoginController extends CI_Controller {
   {
     parent::__construct();
     $this->load->database();
-    $this->load->library('session');
-    $this->load->library('encryption');
-    $this->load->helper('security');
-    $this->load->helper('url');
+    $this->load->library(array('session', 'encryption', 'form_validation'));
+    //$this->load->library('encryption');
+    $this->load->helper(array('security', 'url', 'form'));
+    //$this->load->helper('url');
     $this->load->model('Login');
+    //$this->load->helper('form');
+    //$this->load->library('form_validation');
   }
 
 
@@ -81,13 +83,15 @@ class LoginController extends CI_Controller {
       'scope' => array("email") // permissions here
       ));
     }
+  }
 
     public function register()
     {
+      $this->load->helper('form');
       $loggedin = $this->session->userdata('loggedin');
 
       if ($loggedin == FALSE) {
-          //$this->load->view('registration page'); load the registration page
+          $this->load->view('registration');
           if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm_pass']))
           {
 
