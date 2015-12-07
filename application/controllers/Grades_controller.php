@@ -12,6 +12,7 @@
   			$this->load->database();
   			$this->load->model('Grades_model');
 			$this->load->view('addGrade');
+			echo "something";
   		}
 		
 		public function returnAssignments($class_id)
