@@ -23,7 +23,6 @@
       		font-style: italic;
       }
     </style>
-    <script src="https://localhost:8080/socket.io/socket.io.js"></script>
   </head>
   <body>
   	<div id="nickName">
