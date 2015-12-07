@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html ng-app="webApp">
   
-  <?php $this->load->helper('html');?>
     <head>
         <title>Home</title>
         
 <!--        <link rel=stylesheet href="<?//php echo base_url('assets/css/homeStyle.css')?>">-->
-                <link rel=stylesheet href="<?php echo link_tag('assets/css/homeStyle.css');?>">
+                <link rel=stylesheet href="assets/css/homeStyle.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
