@@ -8,7 +8,7 @@
 			  width: 100%;
 			  margin: auto;
 			  position: center;
-			  background: #fff;
+			  background: #FFFFCC;
 			  height: 50px;
 			  border: 10px;
 			  color: black;
