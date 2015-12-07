@@ -23,7 +23,7 @@
       		font-style: italic;
       }
     </style>
-    
+    <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
   	<div id="nickName">
@@ -49,9 +49,6 @@
     <script src = "http://code.jquery.com/jquery-1.11.1.js"></script>
     
     <script src = "https://cdn.socket.io/socket.io-1.2.0.js"></script>
-
-<!--<script src = 'node_modules/socket.io/></script>-->
-
 
     <script>
     	var socket = io();
