@@ -4,7 +4,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 	<body>
-		<form action="" method="POST">
+	
 		
 			<input type="text" id="assignName" name="assignName" value="assignName"></input>
 			<input type="text" id="description" name="description" value="description"></input>
@@ -14,10 +14,7 @@
 			
 		
 			<input type="button" id="addAssignment" name="addAssignment" value="Add"></input>
-			<input type="submit"></submit>
-		</form>	
-		
-		$assignmentName = $_POST['assignName'];
+			
 	<script>
 			$( document ).ready(function() {
 			
@@ -32,6 +29,7 @@
     				var classID = $("#classID").val();
     				
     				console.log(ass_name);
+    				var assInfo = {'name': ass_name, 'desc': description, 'pp': pointsPossible, 'nn': nickname, 'cid': classID }
     				
 					jQuery.ajax({
 						type: "POST",
@@ -39,8 +37,7 @@
 						dataType: 'json',
 						contentType: "application/json; charset=utf-8",
 						//console.log($result);
-						//data: {name: ass_name, desc: description, pp: pointsPossible, nn: nickname, cid: classID },
-						data: $assignmentName,
+						data: {'name': ass_name, 'desc': $("#assignName").val(), 'pp': pointsPossible, 'nn': nickname, 'cid': classID },
 						success: function(data){
                 			alert('Items added');
             			},
