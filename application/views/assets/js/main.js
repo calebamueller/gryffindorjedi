@@ -44,6 +44,11 @@ app.controller('ClassCtrl', function ($scope, $http) {
   $scope.showAlert = function(event){
     console.log(event.target.id);
   }
+  
+  $scope.go = function (path) {
+    $location.path(path);
+  };
+  
 });
   
   
