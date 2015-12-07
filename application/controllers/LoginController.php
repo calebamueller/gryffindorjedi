@@ -24,9 +24,13 @@ class LoginController extends CI_Controller {
         if(isset($_POST['username']) && isset($_POST['password']))
         {
 
-
           $username = $_POST['username'];
           $password = $_POST['password'];
+
+          echo $username;
+          echo $password;
+          echo $loggedin;
+
 
           $data = $this->Loginmod->login($username, $password);
 
@@ -51,7 +55,7 @@ class LoginController extends CI_Controller {
 
         }
         else {
-          echo 'Please Enter a Username and Password';
+          //echo 'Please Enter a Username and Password';
         }
       }
       else {
