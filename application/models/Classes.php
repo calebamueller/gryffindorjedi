@@ -17,7 +17,7 @@
         );
     }
     
-    $this->db->select('announcements');
+    $this->db->select('announcement');
     $this->db->from('classes');
     $this->db->where('class_id', $id);
     $query = $this->db->get();
