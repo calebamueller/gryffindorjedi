@@ -7,7 +7,7 @@ class LoginController extends CI_Controller {
     $this->load->database();
     $this->load->library(array('session', 'encryption', 'form_validation'));
     //$this->load->library('encryption');
-    $this->load->helper(array('security', 'form'));
+    $this->load->helper(array('security', 'url','form'));
     //$this->load->helper('url');
     $this->load->model('Loginmod');
     //$this->load->helper('form');
