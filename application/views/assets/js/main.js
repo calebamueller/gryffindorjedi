@@ -78,6 +78,15 @@ app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
         });
 });
 
+app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
+  var $id = IdService.getId();
+  console.log('Announce'+$id);
+  $scope.go = function (path) {
+    $location.path(path);
+  };
+  
+}
+
 //app.controller('announceCtrl', function ($scope, $http, $location, IdService) {
 //  $scope.announce = function () {
 //  $scope.annoucement = '';

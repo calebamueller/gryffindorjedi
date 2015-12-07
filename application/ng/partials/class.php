@@ -17,7 +17,7 @@
         <h3>{{class.announcements.announcement}}</h3>
       </div>
       
-      <button class='btn btn-default' ng-controller="PeopleCtrl" ng-click="go('/announcement')">Make an Announcement</button>
+      <button class='btn btn-default' ng-controller="AnnounceCtrl" ng-click="go('/announcement')">Make an Announcement</button>
     </div>
   </div>
   <div class="row">
