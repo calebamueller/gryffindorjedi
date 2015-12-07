@@ -48,7 +48,7 @@
             //$ass_name->$data->name;
             //$description= $data->desc;
             //$pointsPoss = $data->pp;
-          
+            $class_id = ($_POST['id']);
 			$ass_name = ($_POST['name']);
    			$description = ($_POST['desc']);
    			$pointsPoss = ($_POST['pp']);
@@ -69,7 +69,7 @@
    				$pointsPoss = 1;
    			}
    			
-		 	$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
+		 	$this->Grades_model->newAssignment($class_id, $ass_name, $description, $pointsPoss, $uid, $cid);
 
 		}
 		
