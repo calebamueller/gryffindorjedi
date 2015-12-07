@@ -5,16 +5,18 @@ class LoginController extends CI_Controller {
   {
     parent::__construct();
     $this->load->database();
-    $this->load->library('session');
-    $this->load->library('encryption');
-    $this->load->helper('security');
-    $this->load->helper('url');
-    $this->load->model('Login');
+    $this->load->library(array('session', 'encryption', 'form_validation'));
+    //$this->load->library('encryption');
+    $this->load->helper(array('security', 'url','form'));
+    //$this->load->helper('url');
+    $this->load->model('Loginmod');
+    //$this->load->helper('form');
+    //$this->load->library('form_validation');
   }
 
 
-    public function index()
-    {
+  public function index()
+  {
       $loggedin = $this->session->userdata('loggedin');
       $loggedin = FALSE;
       if ($loggedin == FALSE) {
@@ -26,7 +28,7 @@ class LoginController extends CI_Controller {
           $username = $_POST['username'];
           $password = $_POST['password'];
 
-          $data = $this->Login->login($username, $password);
+          $data = $this->Loginmod->login($username, $password);
 
           echo $data;
 
@@ -49,7 +51,7 @@ class LoginController extends CI_Controller {
 
         }
         else {
-          echo 'Please Enter a Username and Password';
+          //echo 'Please Enter a Username and Password';
         }
       }
       else {
@@ -57,7 +59,7 @@ class LoginController extends CI_Controller {
       }
 
 
-    }
+  }
 
   public function fbLogin()
 	{
@@ -81,59 +83,60 @@ class LoginController extends CI_Controller {
       'scope' => array("email") // permissions here
       ));
     }
+  }
 
-    public function register()
-    {
-      $loggedin = $this->session->userdata('loggedin');
+  public function register()
+  {
+    $this->load->helper('form');
+    $loggedin = $this->session->userdata('loggedin');
 
-      if ($loggedin == FALSE) {
-          //$this->load->view('registration page'); load the registration page
-          if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm_pass']))
-          {
+    if ($loggedin == FALSE) {
+      $this->load->view('registration');
+      if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm_pass']))
+      {
+        $username = ($_POST['username']);
+        $password = ($_POST['password']);
+        $confirm_pass = ($_POST['confirm_pass']);
 
-            $username = ($_POST['username']);
-            $password = ($_POST['password']);
-            $confirm_pass = ($_POST['confirm_pass']);
+        if($password != $confirm_pass)
+          die ('Passwords do not match');
+        if($username == NULL || $password == NULL || $confirm_pass == NULL)
+          die('All fields required');
+        //hash and salt password
+        $salt = mt_rand();
+        $pwSalt = $salt.$password;
+        //$hash = $this->encrypt->sha1($password);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
 
-            if($password != $confirm_pass)
-              die ('Passwords do not match');
-            if($username == NULL || $password == NULL || $confirm_pass == NULL)
-              die('All fields required');
-            //hash and salt password
-            $salt = mt_rand();
-            $pwSalt = $salt.$password;
-            //$hash = $this->encrypt->sha1($password);
-            $hash = password_hash($password, PASSWORD_DEFAULT);
-
-            $data = $this->Login->check($username);
+        $data = $this->Loginmod->check($username);
 
 
-            if ($data != 0) {
-              echo "Username already exists. Please try again.";
-            }
-            else {
-              $this->Login->register($username, $hash, $pwSalt, $salt);
-              redirect('LoginController/index', 'refresh');
-            }
-          }
+        if ($data != 0) {
+          echo "Username already exists. Please try again.";
+        }
+        else {
+          $this->Loginmod->register($username, $hash, $pwSalt, $salt);
+          redirect('Home/index', 'refresh');
+        }
       }
-      else {
-        redirect('Home/index', 'refresh');
-      }
-
-
+    }
+    else {
+      redirect('Home/index', 'refresh');
     }
 
-    public function logout() {
-      $this->load->library('facebook');
-      // Logs off session from website
-      $this->facebook->destroySession();
-      // Make sure you destory website session as well.
-      redirect('LoginController/login');
-      $this->session->sess_destroy();
-      $this->db->close();
-      redirect('index', 'refresh');
-    }
+
+  }
+
+  public function logout() {
+    $this->load->library('facebook');
+    // Logs off session from website
+    $this->facebook->destroySession();
+    // Make sure you destory website session as well.
+    redirect('LoginController/login');
+    $this->session->sess_destroy();
+    $this->db->close();
+    redirect('index', 'refresh');
+  }
 
 }
 ?>

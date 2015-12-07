@@ -11,7 +11,7 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-        <link rel="stylesheet" href="http://slateproject.me/gryffindorjedi/assets/css/style.css">
+        <link rel="stylesheet" href="http://slateproject.me/assets/css/style.css">
   <!--      <link rel="stylesheet" href="<?php// echo base_url('../assets/css/style.css')?>">-->
         <link href='https://fonts.googleapis.com/css?family=Exo+2:400,200' rel='stylesheet' type='text/css'>
 
@@ -51,7 +51,8 @@
                           <button type="submit" class="btn btn-default" onclick="location.href='http://slateproject.me/gryffindorjedi/application/views/home.php'">Sign-in</button>
                         </form>
                         <div class="row col-xs-12" id="signup">
-                            <h3>Need an account?<br><a href="http://slateproject.me/gryffindorjedi/application/views/registration.php">Sign Up</a></h3>
+                          <h3>Need an account?<br><a href="http://slateproject.me/index.php/LoginController/register">Sign Up</a></h3>
+                          <!-- <h3>Need an account?<br><a href="registration.php">Sign Up</a></h3>-->
                         </div>
 
                     </div>

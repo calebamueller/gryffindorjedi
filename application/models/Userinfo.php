@@ -8,8 +8,8 @@
   public function getUser() {
 
 	$array=array();
-
-	$this->db->select('a.class_name, a.instructor');
+	
+	$this->db->select('a.class_name, a.instructor, a.class_id');
     	$this->db->from('classes as a');
 	$this->db->join('users as b',"a.class_id = b.class1");
 	$class= $this->db->get();
@@ -21,7 +21,7 @@
 
 	}	
 
-	$this->db->select('c.class_name, c.instructor');
+	$this->db->select('c.class_name, c.instructor, c.class_id');
 	$this->db->from('classes as c');
 	$this->db->join('users as d', 'c.class_id = d.class2');
 	$class2 = $this->db->get();
@@ -32,7 +32,7 @@
 		);
 	}
 
-	$this->db->select('e.class_name, e.instructor');
+	$this->db->select('e.class_name, e.instructor, e.class_id');
 	$this->db->from('classes as e');
 	$this->db->join('users as f', 'e.class_id = f.class3');
 	$class3 = $this->db->get();
@@ -43,7 +43,7 @@
 		);
 	}
 
-	$this->db->select('g.class_name, g.instructor');
+	$this->db->select('g.class_name, g.instructor, g.class_id');
 	$this->db->from('classes as g');
 	$this->db->join('users as h', 'g.class_id = h.class4');
 	$class4 = $this->db->get();
