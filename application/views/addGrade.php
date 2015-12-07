@@ -37,7 +37,7 @@
 						dataType: 'json',
 						contentType: "application/json; charset=utf-8",
 						//console.log($result);
-						data: {'name': 'assignName', 'desc': description, 'pp': pointsPossible, 'nn': nickname, 'cid': classID },
+						data: {'name': 'assignName'},
 						success: function(data){
                 			alert('Items added');
             			},
