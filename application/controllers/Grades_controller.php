@@ -33,11 +33,11 @@
 			$points_possible = $_POST['pp'];
 			$username = $_POST['nn'];
 			$class_id = $_POST['cid'];*/
-			$ass_name = $this->input->post('name');
-   			$description = $this->input->post('desc');
-   			$pointsPoss = $this->input->post('pp');
-   			$uid = $this->input->post('nn');
-   			$cid = $this->input->post('cid');
+			$ass_name = $_POST['name'];
+   			$description = $_POST['desc'];
+   			$pointsPoss = $_POST['pp'];
+   			$uid = $_POST['nn'];
+   			$cid = $_POST['cid'];
 			
 
 			echo $ass_name;
