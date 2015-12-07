@@ -1,4 +1,4 @@
-<div class="col-sm-12" id="class" ng-controller="ClassCtrl">
+<div class="col-sm-12" id="class">
   <div class="col-sm-6" id="left">
     <h2>Due</h2>
     <div class="col-sm-12" id="due">
