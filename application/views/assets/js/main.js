@@ -42,7 +42,7 @@ app.controller('PeopleCtrl', function ($scope, $http, $location) {
   $scope.createUrl = function(event){
       console.log(event.target.id);
       $scope.id = event.target.id;
-    
+  $scope.classes = []  
   $http.get('index.php/home/getclass/'+$scope.id)
           .success(function(data){
           $scope.classes = data;
