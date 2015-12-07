@@ -34,6 +34,7 @@ app.service('IdService', [function() {
     console.log($classId);
   }
   this.getId = function() {
+    console.log($classId);
     return $classId;
   }
   var $dicks = 'Dicks'
