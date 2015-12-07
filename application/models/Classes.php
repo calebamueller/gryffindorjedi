@@ -37,7 +37,7 @@
       );
     
     $this->db->where('class_id', $id);
-    $this->db->update('classes', $announcment);
+    $this->db->update('classes', $data);
     
   }
 }
