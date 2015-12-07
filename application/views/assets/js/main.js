@@ -77,6 +77,17 @@ app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
         });
 });
 
+app.controller('announceCtrl', function ($scope, $http, $location, IdService) {
+  $scope.announce = function () {
+  $scope.annoucement = '';
+  var $id = IdService.getId();
+  $http.post('index.php/home/makeAnnouncement/'+$id+$scope.announcement)
+    .success(function(data){
+      alert("success");
+  });
+  };
+};
+
 
     
                     
