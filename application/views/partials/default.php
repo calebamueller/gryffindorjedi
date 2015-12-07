@@ -16,7 +16,7 @@
               <p>{{person.class6.class_name}}</p> 
               <p>{{person.class6.instructor}}</p>
               
-              <button class='btn-default' id='{{person.class1.class_name}}{{person.class2.class_name}}{{person.class3.class_name}}{{person.class4.class_name}}' ng-click='alert($event.target.id)'><a href='#/class'>Button</a></button>
+              <button ng-controller="ClassCtrl" class='btn-default' id='{{person.class1.class_name}}{{person.class2.class_name}}{{person.class3.class_name}}{{person.class4.class_name}}' ng-click='showAlert($event)'><a href='#/class'>Button</a></button>
               
             </div>
           </div>
