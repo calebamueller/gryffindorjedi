@@ -31,19 +31,20 @@
     				console.log(ass_name);
     				var assInfo = {'name': ass_name, 'desc': description, 'pp': pointsPossible, 'nn': nickname, 'cid': classID }
     				
+    				
 					jQuery.ajax({
 						type: "POST",
 						url: "/index.php/Grades_controller/newAssignment",
-						dataType: 'json',
-						//contentType: "application/json; charset=utf-8",
+						//dataType: 'json',
+						contentType: "application/json; charset=utf-8",
 						//console.log($result);
 						data: {'name': 'assignName'},
-						success: function(data){
+						/*success: function(data){
                 			alert('Items added');
             			},
             			error: function(e){
                 			console.log(e.message);
-            			}
+            			}*/
 					});
 						
 				});
