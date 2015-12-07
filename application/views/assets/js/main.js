@@ -30,6 +30,7 @@ app.config(['$routeProvider', function($routeProvider) {
 app.factory('IdService', [function($scope) {
   this.setId = function($id){
     $scope.classId = $id;
+    return $scope.id;
   }
   this.getId = function($id) {
     return $scope.id;
