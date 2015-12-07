@@ -67,7 +67,7 @@ app.controller('PeopleCtrl', function ($scope, $http, $location, IdService) {
 
 app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
   
-  var $id = IdService.getId;
+  var $id = IdService.getId();
   console.log($id);
   $http.get('index.php/home/getclass/'+$id)
           .success(function(data){
