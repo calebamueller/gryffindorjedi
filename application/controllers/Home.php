@@ -22,7 +22,7 @@ class Home extends CI_Controller {
         echo $info;
     }
   
-    public function announcments(){
+    public function announcements(){
       $this->load->library('form_validation');
       $this->load->helper('form');
       $announcement = $_POST['announcement'];
