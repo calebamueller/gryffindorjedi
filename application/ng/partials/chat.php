@@ -29,8 +29,8 @@
   		<p>Enter a Username</p>
   		<p id="nickErr"></p>
   		<form id="setName">
-  			<input size="35" id="nickInput"></input>
-  			<input type="submit"></input>
+  			<input size="35" id="nickInput">
+  			<input type="submit">
   		</form>
   	</div>
   	
@@ -38,8 +38,8 @@
   		<div id="chatWrap">
     		<div id="m"></div>
     		<form id="sendForm" action="">
-    	  		<input size="35" id="inputM"/></input>
-    	  		<input type="submit"></input>
+    	  		<input size="35" id="inputM"/>
+    	  		<input type="submit">
     		</form>
     	</div>
     	<div id="users"></div>
