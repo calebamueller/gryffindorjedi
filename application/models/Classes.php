@@ -17,6 +17,16 @@
         );
     }
     
+    $this->db->select('announcements');
+    $this->from->('classes');
+    $this->db->where('class_id', $id);
+    $query = $this->db->get();
+    foreach($query->result() as $row){
+      $array[] = array(
+        'announcements'=>$row
+        );
+    }
+    
     return $array;
   }
 }
