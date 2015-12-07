@@ -39,6 +39,8 @@
    			$uid = $_POST['nn'];
    			$cid = $_POST['cid'];
    			
+   			echo json_encode($ass_name);
+   			
 		 	$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
 		 	$result = "success";
 		 	
