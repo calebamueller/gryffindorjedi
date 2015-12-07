@@ -12,7 +12,7 @@
 
 /* Main AngularJS Web App */
 
-var app = angular.module('webApp', ['ngRoute']);
+var app = angular.module('webApp', ['ngRoute', 'IdService']);
 
 /* Configure the Routes */
 
