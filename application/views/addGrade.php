@@ -20,11 +20,11 @@
 			
     			$("#addAssignment").click(function() {
     				console.log("doctor doctor manana");
-    				/*var ass_name = $("#assignName").val();
+    				var ass_name = $("#assignName").val();
 					var description = $("#description").val();
 					var pointsPossible = $("#pointsPossible").val();
 					var nickname = $("#nickname").val();
-    				var classID = $("#classID").val();*/
+    				var classID = $("#classID").val();
     				
 					jQuery.ajax({
 						type: "POST",
