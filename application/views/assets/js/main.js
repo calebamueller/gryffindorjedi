@@ -40,7 +40,7 @@ app.controller('PeopleCtrl', function ($scope, $http) {
     });
 });
 
-app.controller('ClassCtrl', function ($scope, $http) {
+app.controller('ClassCtrl', function ($scope, $http, $location) {
   $scope.showAlert = function(event){
     console.log(event.target.id);
   }
