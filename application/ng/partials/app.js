@@ -1,6 +1,6 @@
 var app = require('express')();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var io = require('index.php/application/ng/partials/node_modules/socket.io')(http);
 //var io = require('socket.io')(server);
 //var nicknames = [];
 //var port process.env.PORT || 3000;
