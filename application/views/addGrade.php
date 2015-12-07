@@ -3,21 +3,20 @@
 <head>
 	 
 	<style>
-	
+		.bg{
+			background: #282828;
+		}
 		#header{
 		  	  font-size: 35px;
 			  width: 100%;
 			  margin: auto;
 			  position: center;
-			  background: #282828;
 			  height: 50px;
 			  border: 10px;
-			  color: black;
+			  color: #FFF;
 		}
 		
-		.bg{
-			background: #282828;
-		}
+		
 	</style>
 </head>
 <div id="content">
