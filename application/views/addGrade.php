@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   		<script src="jquery-1.11.3.min.js"></script>
+  		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	</head>
 	<body>
 	
@@ -20,7 +21,7 @@
 						type: "POST",
 						url: "<?php echo base_url(); ?>" + "/index.php/Grades_controller/newAssignment",
 						dataType: 'json',
-						console.log(results);
+						console.log($results);
 						data: {name: ass_name, desc: description, pp: pointsPossible, nn: nickname }
 						});
 						
