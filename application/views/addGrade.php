@@ -34,7 +34,7 @@
     				
 					jQuery.ajax({
 						type: "POST",
-						url: "/index.php/controllers/Grades_controller/newAssignment",
+						url: "/index.php/Grades_controller/newAssignment",
 						dataType: 'json',
 						contentType: "application/json",
 						//console.log($result);
