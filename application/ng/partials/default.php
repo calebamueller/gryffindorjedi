@@ -2,7 +2,7 @@
         <div id="top" ng-controller="PeopleCtrl">
           <div ng-repeat="person in people">
             
-            <div class="col-sm-4 item" id="item">
+            <div class="col-sm-3 item" id="item">
               
               <p>{{person.class1.class_name}}</p>
               <p>{{person.class1.instructor}}</p>    
