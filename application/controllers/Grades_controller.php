@@ -5,31 +5,54 @@
   		{
 			parent::__construct();
 			
-			$data['class_id'] = '';//how are we passing this info?
-			$data['username'] = '';//teacher username and how are we limiting the teachers to this view?
-			$this->load->database();
-			
-			
   		}
   		
   		public function index()
   		{
+  			$this->load->database();
   			$this->load->model('Grades_model');
-  			$this->load->helper('form');
 			$this->load->view('addGrade');
-  			echo form_submit('mysubmit', 'Submit Post!');
   		}
 		
 		public function returnAssignments($class_id)
 		{
 			//this->class_id = $data['class_id'];
-			$resourceInfo = $this->Grades_model->returnAssignments($class_id);
+			//$resourceInfo = $this->Grades_model->returnAssignments($class_id);
 		}
 		
-		public function newAssignment($ass_name, $ass_description, $username, $point_possible)
+		public function newAssignment()
 		{
-		 	$this->Grades_model->newAssignment($ass_name, $ass_description, $username, $point_possible);
-
+			$this->load->database();
+  			$this->load->model('Grades_model');
+  			$this->load->helper('form');
+			$this->load->view('addGrade');
+			
+			
+			/*$ass_name = $_POST['name'];
+			$ass_description = $_POST['desc'];
+			$points_possible = $_POST['pp'];
+			$username = $_POST['nn'];
+			$class_id = $_POST['cid'];*/
+			$ass_name = $_POST['name'];
+   			$description = $_POST['desc'];
+   			$pointsPoss = $_POST['pp'];
+   			$uid = $_POST['nn'];
+   			$cid = $_POST['cid'];
+   			
+   			if( $_POST['name'] == "assignName")
+   			{
+   				echo "ok";
+   			}
+   			
+   			//echo $ass_name;
+   			//echo $_POST['name'];
+   			//echo json_encode($ass_name);
+   			
+   			
+		 	$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
+		 	$result = "success";
+		 	
+		 	return $result;
 		}
 		
 		public function removeResource($resourceID)

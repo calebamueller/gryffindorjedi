@@ -101,6 +101,18 @@
 /*    float: right;*/
 }
 
+#item {
+  margin-right: 10px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  border: 1px solid white;
+  
+}
+
+#item p {
+  font-size: 20px;
+}
+
 #chat {
     height: 500px;
     margin-left: 0;
@@ -159,7 +171,7 @@
 }
 
 #class #due h3, #class #grades h3, #class #messages h3, #class #ccontent h3 {
-    font-size: 14px;
+    font-size: 20px;
     display: inline;
   
 }
