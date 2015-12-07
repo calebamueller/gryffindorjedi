@@ -79,10 +79,17 @@ app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
 });
 
 app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
+  $scope.master = {};
+  
+  $scope.update = function($id) {
+    $scope.master = angular.copy(user);
+    console.log($scope.master);
+  };
+  
   $scope.getId = function() {
     var $id = IdService.getId();
     console.log('Announce'+$id);
-  }
+  };
   
 //  $http.post('index.php/Home/announcements/'+$id)
 //    .success(function(data){
