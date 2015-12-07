@@ -29,6 +29,6 @@
   </p>
   <?php //echo form_close(); ?>
   
-  <pre>classes.name</pre>
+  <pre>ass.name | json</pre>
   
 </div><!--<div class="reg_form">-->
