@@ -17,6 +17,10 @@
   <input type="text" id="pp" name="pp" value="<?php echo set_value('pp'); ?>" />
   </p>
   <p>
+  <label for="fileInput">File Upload</label>
+  <input type="file" id="doc" name="doc" value="<?php echo set_value('doc'); ?>" />
+  </p>
+  <p>
   <input type="submit" value="Submit" />
   </p>
  <?php echo form_close(); ?>
