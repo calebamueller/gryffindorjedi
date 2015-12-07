@@ -123,6 +123,46 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
   
 });
 
+app.controller('assignCtrl', function ($scope, $http, $location, IdService) {
+  $scope.master = {};
+  
+  $scope.update = function(classes) {
+    $scope.master = angular.copy(classes);
+//    $http.post('index.php/Home/announcements/')
+//    .success(function(response){
+//      console.log(response);
+//    });
+    var FormData = {
+      'name' : $scope.master.name,
+      'desc' : $scope.master.desc,
+      'pp' : $scope.master.pp
+    };
+    $http({
+      method: 'POST',
+      url: 'index.php/Grades_controller/newAssignment',
+      data: FormData,
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    })
+      .success(function(response) {
+        console.log(response);
+      });
+  };
+  
+//  $scope.getId = function() {
+//    var $id = IdService.getId();
+//    console.log('Announce'+$id);
+//  };
+  
+//  $http.post('index.php/Home/announcements/'+$id)
+//    .success(function(data){
+//    console.log(data);
+//  });
+    $scope.go = function (path) {
+    $location.path(path);
+  };
+  
+});
+
 //app.controller('announceCtrl', function ($scope, $http, $location, IdService) {
 //  $scope.announce = function () {
 //  $scope.annoucement = '';
