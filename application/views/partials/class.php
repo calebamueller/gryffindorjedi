@@ -8,10 +8,6 @@
         <h3>{{assignment.assignments.points_possible}}<br></h3>
         
       </div>
-
-      
-      <span><h3>Homework 1: </h3><p>{{c.assignments.ass_name}}</p><br></span>
-      <h3>Homework 2: </h3><p>September 2<br></p>
     </div>
   </div>
   <div class="col-sm-6" id="center">

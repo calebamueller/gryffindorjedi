@@ -7,7 +7,7 @@
   
   public function getClassInfo($id) {
     $array = array();
-    $this->db->select('ass_name, ass_description');
+    $this->db->select('ass_name, ass_description, points_possible');
     $this->db->from('assignments');
     $this->db->where('class_id', $id);
     $query = $this->db->get();
