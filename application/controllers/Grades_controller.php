@@ -42,7 +42,7 @@
 			$this->load->database();
   			$this->load->model('Grades_model');
   			$this->load->helper('form');
-			$this->load->view('addGrade');
+			//$this->load->view('addGrade');
 			
             $data = json_decode(file_get_contents("php://input"));
             $ass_name->$data->name;

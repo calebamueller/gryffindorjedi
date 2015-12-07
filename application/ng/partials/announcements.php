@@ -5,5 +5,4 @@
   <input type='submit' value="Announce!" ng-click="update(classes); go('/announcement')">
   </form>
   
-  
 </div>
