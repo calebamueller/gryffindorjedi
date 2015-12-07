@@ -19,7 +19,7 @@ use WindowsAzure\Common\CloudConfigurationManager;
 use WindowsAzure\Blob\Models\Block;
 use WindowsAzure\Blob\Models\CreateContainerOptions;
 use WindowsAzure\Blob\Models\ListContainersOptions;
-$chosenfilename = $argv[1];
+$chosenfilename = $_POST['doc'];
 define("CONTAINERNAME", "files");
 define("BLOCKBLOBNAME", "$chosenfilename");
 define("BLOCKSIZE", 4 * 1024 * 1024);    // Size of the block, modify if needed.
@@ -52,7 +52,7 @@ function createContainerIfNotExists($blobRestProxy)
     }
 }
 try {
-    echo "Beginning processing.\n";
+    //echo "Beginning processing.\n";
 
 
 
@@ -60,8 +60,8 @@ try {
   $connectionString="DefaultEndpointsProtocol=http;AccountName=" . ACCOUNTNAME . ";AccountKey=" . ACCOUNTKEY;
     $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
     createContainerIfNotExists($blobRestProxy);
-    echo "Using the '" . CONTAINERNAME . "' container and the '" . BLOCKBLOBNAME . "' blob.\n";
-    echo "Using file '" . FILENAME . "'\n";
+    //echo "Using the '" . CONTAINERNAME . "' container and the '" . BLOCKBLOBNAME . "' blob.\n";
+    //echo "Using file '" . FILENAME . "'\n";
     if (!file_exists(FILENAME))
     {
         echo "The '" . FILENAME . "' file does not exist. Exiting program.\n";
@@ -74,7 +74,7 @@ try {
     while (!feof($handle))
     {
         $blockId = str_pad($counter, PADLENGTH, "0", STR_PAD_LEFT);
-        echo "Processing block $blockId.\n";
+        //echo "Processing block $blockId.\n";
 
         $block = new Block();
         $block->setBlockId(base64_encode($blockId));
@@ -89,10 +89,11 @@ try {
     }
     // Done creating the blocks. Close the file and commit the blocks.
     fclose($handle);
-    echo "Commiting the blocks.\n";
+    //echo "Commiting the blocks.\n";
     $blobRestProxy->commitBlobBlocks(CONTAINERNAME, BLOCKBLOBNAME, $blockIds);
 
-    echo "Done processing.\n";
+    echo "http://slatestorage.blob.core.windows.net/files/" . FILENAME . "\n";
+    //echo "Done processing.\n";
 }
 catch(ServiceException $serviceException)
 {
