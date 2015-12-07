@@ -49,13 +49,16 @@ app.controller('PeopleCtrl', function ($scope, $http) {
           console.log(data);
         });
   }
-});
-
-app.controller('ClassCtrl', function ($scope, $http, $location) {
   
   $scope.go = function (path) {
     $location.path(path);
   };
+  
+});
+
+app.controller('ClassCtrl', function ($scope, $http, $location) {
+  
+  
   
 });
   
