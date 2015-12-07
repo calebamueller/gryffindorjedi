@@ -3,11 +3,11 @@
   <head>
     <title>Instant Messenger</title>
     <style>
-      
+
       #m{
       	height: 500px;
       }
-      
+
       #contentWrap{
       		display: none;
       }
@@ -26,17 +26,17 @@
   </head>
   <body>
   	<div id="nickName">
-  		<p>Enter a Username</p>
+  		<p>Enter a Username. Any user name that already exists will not be accepted</p>
   		<p id="nickErr"></p>
   		<form id="setName">
   			<input size="35" id="nickInput">
   			<input type="submit">
   		</form>
   	</div>
-  	
+
   	<div id="contentWrap">
   		<div id="chatWrap">
-    		<div id="m"></div>
+    		<div id="m">Welcome to the chat. To sent a personal message type /w (username) and the message</div>
     		<form id="sendForm" action="">
     	  		<input size="35" id="inputM"/>
     	  		<input type="submit">
@@ -46,12 +46,12 @@
     </div>
 
     <script src = "http://code.jquery.com/jquery-1.11.1.js"></script>
-    
+
     <script src = "https://cdn.socket.io/socket.io-1.2.0.js"></script>
 
     <script>
     	var socket = io();
-    	
+
     	$('#setName').submit(function(e){
     		e.preventDefault();
     		socket.emit('new user', $('#nickInput').val(), function(data){
@@ -61,12 +61,12 @@
     			}else{
     				$('#nickErr').html('Username already exists');
     			}
-    			
+
     		});
     		$('#nickInput').val('');
-    		
+
     	});
-    	
+
     	socket.on('usernames', function(data){
     		var html = '';
     		for(i=0; i<data.length; i++)
@@ -75,7 +75,7 @@
     		}
     		$('#users').html(html);
     	});
-    	
+
     	$('#sendForm').submit(function(){
     		socket.emit('chat message', $('#inputM').val(), function(data){
     			$('#m').append('<span class="error">' + data + "</span><br/>");
@@ -83,15 +83,15 @@
     		$('#inputM').val('');
     		return false;
     	});
-    	
+
     	socket.on('chat message', function(data){
     		$('#m').append('<span class="msg"><b>' + data.nick + ': </b>' + data.msg + "</span><br/>");
     	});
-    	
+
     	socket.on('whisper', function(data){
     		$('#m').append('<span class="whisper"><b>' + data.nick + ': </b>' + data.msg + "</span><br/>");
     	});
     </script>
-  
+
   </body>
 </html>
