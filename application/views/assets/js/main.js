@@ -27,6 +27,15 @@ app.config(['$routeProvider', function($routeProvider) {
        
 }]);
 
+app.service('IdService', function($scope) {
+  this.setId = function($id){
+    $scope.classId = $id;
+  }
+  this.getId = function($id) {
+    return $scope.id;
+  }
+});
+
 app.controller('PageCtrl', function($scope, $location, $http) {
   console.log("Page Controller is GO");
 });
@@ -42,7 +51,7 @@ app.controller('PeopleCtrl', function ($scope, $http, $location) {
   $scope.createUrl = function(event){
       console.log(event.target.id);
       $scope.id = event.target.id;
-      idService.setId($scope.id);
+      IdService.setId($scope.id);
   }
   
    $scope.go = function (path) {
@@ -53,7 +62,7 @@ app.controller('PeopleCtrl', function ($scope, $http, $location) {
 
 app.controller('ClassCtrl', function ($scope, $http, $location) {
   
-  var $id = idService.getId;
+  var $id = IdService.getId;
   
   $http.get('index.php/home/getclass/'+$id)
           .success(function(data){
@@ -62,14 +71,7 @@ app.controller('ClassCtrl', function ($scope, $http, $location) {
         });
 });
 
-app.service('idService', function($scope) {
-  this.setId = function($id){
-    $scope.classId = $id;
-  }
-  this.getId = function($id) {
-    return $scope.id;
-  }
-});
+
     
                     
   
