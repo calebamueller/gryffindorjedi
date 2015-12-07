@@ -32,7 +32,7 @@ class Home extends CI_Controller {
       echo $announcement;
       //$id = $_POST['id'];
       $this->load->model('Classes');
-      //$this->db->announce($id, $announcement);
+      $this->db->announce($id, $announcement);
        
     }
 }
