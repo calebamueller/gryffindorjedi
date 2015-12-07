@@ -12,9 +12,10 @@ class EmailControl extends CI_Controller {
 
  public function index()
 {
-  $list = $this->Email->getIDs;
-  $teacher = $this->Email->;
-  $classname = $this->Email->;
+  $cid = $this->Email->getCID();
+  $list = $this->Email->getIDs($cid);
+  $teacher = $this->Email->getTeacher();
+  $classname = $this->Email->getClassName();
 
   foreach ($list as $name => $address)
   {
