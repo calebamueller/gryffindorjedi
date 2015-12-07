@@ -6,11 +6,11 @@
  <?php echo form_open("Grades_controller/newAssignment"); ?>
   <p>
   <label for="assignment_name">Assignment Name:</label>
-  <input type="text" id="ass_name" name="ass_name" value="<?php echo set_value('name'); ?>" />
+  <input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>" />
   </p>
   <p>
   <label for="desc">Description:</label>
-  <input type="text" id="description" name="description" value="<?php echo set_value('desc'); ?>" />
+  <input type="text" id="desc" name="desc" value="<?php echo set_value('desc'); ?>" />
   </p>
   <p>
   <label for="pointsPoss">Points Possible:</label>
