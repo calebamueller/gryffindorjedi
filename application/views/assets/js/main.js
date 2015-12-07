@@ -55,8 +55,6 @@ app.controller('ClassCtrl', function ($scope, $http, $location) {
     $location.path(path);
   };
   
-  $http.get('index.php/home/getClass/
-  
 });
   
   
