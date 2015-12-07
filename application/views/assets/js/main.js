@@ -24,6 +24,7 @@ app.config(['$routeProvider', function($routeProvider) {
         .when("/", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
         .when("/home", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
         .when("/class", {templateUrl: "application/ng/partials/class.php", controller: "PageCtrl"});
+        .when("/announcement", {templateUrl: "application/ng/partials/announcement.php", controller: "PageCtrl"});
        
 }]);
 
