@@ -16,7 +16,7 @@
   </p>
   
   <p>
-  <input type="submit" value="Submit" ng-click="update(ass)"/>
+  <input type="submit" value="Submit" ng-controller='PeopleCtrl' ng-click="go('/home')"/>
   </p>
  <?php //echo form_close(); ?>
  
