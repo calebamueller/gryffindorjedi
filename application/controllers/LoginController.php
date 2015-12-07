@@ -94,7 +94,6 @@ class LoginController extends CI_Controller {
       $this->load->view('registration');
       if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm_pass']))
       {
-
         $username = ($_POST['username']);
         $password = ($_POST['password']);
         $confirm_pass = ($_POST['confirm_pass']);
