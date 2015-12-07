@@ -3,14 +3,6 @@
   <head>
     <title>Instant Messenger</title>
     <style>
-     /* * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }*/
       
       #m{
       	height: 500px;
@@ -22,6 +14,13 @@
       #chatWrap{
       		float: left;
       		border: 1px #000 solid;
+      }
+      .error{
+      		color: red;
+      }
+      .whisper{
+      		color: purple;
+      		font-style: italic;
       }
     </style>
     
@@ -77,16 +76,20 @@
     	});
     	
     	$('#sendForm').submit(function(){
-    		socket.emit('chat message', $('#inputM').val());
+    		socket.emit('chat message', $('#inputM').val(), function(data){
+    			$('#m').append('<span class="error">' + data + "</span><br/>");
+    		});
     		$('#inputM').val('');
     		return false;
     	});
     	
     	socket.on('chat message', function(data){
-    		$('#m').append('<b>' + data.nick + ': </b>' + data.msg + "<br/c>");
+    		$('#m').append('<span class="msg"><b>' + data.nick + ': </b>' + data.msg + "</span><br/>");
     	});
     	
-    	
+    	socket.on('whisper', function(data){
+    		$('#m').append('<span class="whisper"><b>' + data.nick + ': </b>' + data.msg + "</span><br/>");
+    	});
     </script>
   
   </body>

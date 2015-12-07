@@ -12,13 +12,20 @@
 			$this->db->select('ass_name, ass_description, username, point_possible');
 			$this->db->where('classID', $classID);
 			
+			$array = array();
+			
 			$query = $this->db->get('assignments');
 			//do hashes in DB
-
-			return $query->num_rows();
+			foreach ($query->result() as $row)
+			{
+				$array[] = array(
+					'assignment' => $row
+				);
+			}
+			return $array;
 		}
 
-		public function newAssignment($ass_name, $ass_description, $username, $points_possible, $class_id)
+		public function newAssignment($ass_name, $ass_description, $points_possible, $username, $class_id)
 		{
 			$newAssignment = array(
    				'ass_name' => $ass_name ,
