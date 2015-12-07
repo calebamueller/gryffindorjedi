@@ -26,7 +26,7 @@ class Home extends CI_Controller {
       //$this->load->library('form_validation');
       //$this->load->helper('form');
       $announcement = $_POST['announcement'];
-      echo $announcement.$id
+      echo $announcement.$id;
       $this->load->model('Classes');
       $this->db->announce($id, $announcement);
     }
