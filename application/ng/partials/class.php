@@ -3,9 +3,9 @@
     <h2>Due</h2>
     <div class="col-sm-12" id="due">
       <div ng-repeat="assignment in classes">
-        <h3>Assignment:  {{assignment.assignments.ass_name}}<br></h3>
-        <h3>Description:  {{assignment.assignments.ass_description}}<br></h3>
-        <h3>Points Possible:  {{assignment.assignments.points_possible}}<br></h3>
+        <h3>{{assignment.assignments.ass_name}}<br></h3>
+        <h3>  {{assignment.assignments.ass_description}}<br></h3>
+        <h3>  {{assignment.assignments.points_possible}}<br></h3>
         
       </div>
     </div>
