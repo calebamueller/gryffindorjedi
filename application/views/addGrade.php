@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <html>
+<head>
+	 
+	<style>
+		.form_title{
+		  width: 100%;
+		  position: fixed;
+		  background: #fff;
+  		  height: 75px;
+		  padding-top: 10px;
+          color: black;
+		}
+		
+		#{
+		
+		}
+	</style>
+</head>
 <div id="content">
 <div class="reg_form">
-<div class="form_title">Add Resource</div>
+<div class="form_title" id="">Add Resource</div>
  <?php echo form_open("Grades_controller/newAssignment"); ?>
   <p>
   <label for="assignment_name">Assignment Name:</label>
