@@ -36,7 +36,7 @@
    				'class_id' => $class_id
 			);
             $this->db->where('class_id', $class_id);
-			$this->db->insert('assignments', $newAssignment);
+			$this->db->update('assignments', $newAssignment);
 		}
 		
 		public function removeResource($resourceID)
