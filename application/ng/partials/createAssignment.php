@@ -16,7 +16,7 @@
   </p>
   
   <p>
-  <input type="submit" value="Submit" ng-controller='PeopleCtrl' ng-click="go('/home')"/>
+  <input type="submit" value="Submit" ng-controller='PeopleCtrl' onclick="location.href('http://slateproject.me')"/>
   </p>
  <?php //echo form_close(); ?>
  
