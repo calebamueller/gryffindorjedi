@@ -35,7 +35,7 @@
 						type: "POST",
 						url: "/index.php/Grades_controller/newAssignment",
 						dataType: 'json',
-						contentType: "application/json; charset=utf-8",
+						//contentType: "application/json; charset=utf-8",
 						//console.log($result);
 						data: {'name': 'assignName'},
 						success: function(data){
