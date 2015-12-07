@@ -1,10 +1,10 @@
-<div class="col-sm-12" id="class" ng-controller="PeopleCtrl">
+<div class="col-sm-12" id="class" ng-controller="ClassCtrl">
   <div class="col-sm-6" id="left">
     <h2>Due</h2>
     <div class="col-sm-12" id="due">
 
-      <div ng-repeat="c in people">
-        <h3>{{c.class1.classId}<br></h3>
+      <div ng-repeat="assignment in classes">
+        <h3>{{assignment.ass_name}}<br></h3>
       </div>
 
       
