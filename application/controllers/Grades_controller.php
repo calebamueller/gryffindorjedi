@@ -75,7 +75,7 @@
    			
 		 	$this->Grades_model->newAssignment($class_id, $ass_name, $description, $pointsPoss, $uid, $cid);
 
-			redirect('Home/index', 'refresh');
+			redirect('http://slateproject.me', 'refresh');
 		}
 
 		public function removeResource($resourceID)
