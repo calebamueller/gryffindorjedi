@@ -83,7 +83,7 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
   
   $scope.update = function(classes) {
     $scope.master = angular.copy(classes);
-    $http.post('index.php/Home/announcements/'+$scope.master.id+'/'+$scope.master.announcement)
+    $http.post('index.php/Home/announcements/'+$scope.master.id)
     .success(function(data){
       console.log($scope.master);
     });
