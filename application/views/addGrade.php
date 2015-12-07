@@ -35,8 +35,14 @@
 						url: "/index.php/Grades_controller/newAssignment",
 						dataType: 'json',
 						//console.log($result);
-						data: {name: ass_name, desc: description, pp: pointsPossible, nn: nickname, cid: classID }
-						});
+						data: {name: ass_name, desc: description, pp: pointsPossible, nn: nickname, cid: classID },
+						success: function(data){
+                			alert('Items added');
+            			},
+            			error: function(e){
+                			console.log(e.message);
+            			}
+					});
 						
 				});
 			});
