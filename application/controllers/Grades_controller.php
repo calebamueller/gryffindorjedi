@@ -48,7 +48,7 @@
             //$ass_name->$data->name;
             //$description= $data->desc;
             //$pointsPoss = $data->pp;
-          
+
 			$ass_name = ($_POST['name']);
  			$description = ($_POST['desc']);
  			$pointsPoss = ($_POST['pp']);
