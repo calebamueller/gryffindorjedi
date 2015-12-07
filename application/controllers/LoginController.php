@@ -39,7 +39,7 @@ class LoginController extends CI_Controller {
                   'loggedin'        => TRUE
                   ));
 
-                //redirect('the main lobby controller function that loads the lobby controllername/functionname', 'refresh');
+                redirect('Home/index', 'refresh');
 
               }
               else {
@@ -49,11 +49,11 @@ class LoginController extends CI_Controller {
 
         }
         else {
-          //echo 'Please Enter a Username and Password';
+          echo 'Please Enter a Username and Password';
         }
       }
       else {
-        //redirect('to the main lobby controller function that loads the lobby controllername/functionname', 'refresh');
+        redirect('Home/index', 'refresh');
       }
 
 
@@ -118,7 +118,7 @@ class LoginController extends CI_Controller {
           }
       }
       else {
-        //redirect('redirect to main lobby controller controllername/functionname', 'refresh');
+        redirect('Home/index', 'refresh');
       }
 
 
