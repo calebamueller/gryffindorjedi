@@ -4,12 +4,14 @@
 	 
 	<style>
 		#header{
-		  width: 100%;
-		  position: center;
-		  background: #fff;
-  		  height: 75px;
-		  border: 10px;
-          color: black;
+		  	  font-size: 35;
+		  	  font-style: helvetica;
+			  width: 100%;
+			  position: center;
+			  background: #fff;
+			  height: 75px;
+			  border: 10px;
+			  color: black;
 		}
 		
 		#{
