@@ -33,6 +33,8 @@ class Home extends CI_Controller {
     }
 
     public function announcements(){
+      $this->load->database();
+
       //$this->load->library('form_validation');
       //$this->load->helper('form');
       $data = json_decode(file_get_contents("php://input"));
@@ -42,8 +44,8 @@ class Home extends CI_Controller {
       echo $announcement;
       //$id = $_POST['id'];
       $this->load->model('Classes');
-      //$this->db->announce($id, $announcement);
 
+      $this->Classes->announce($id, $announcement);
     }
 }
 ?>
