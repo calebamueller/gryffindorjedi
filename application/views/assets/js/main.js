@@ -27,7 +27,7 @@ app.config(['$routeProvider', function($routeProvider) {
        
 }]);
 
-app.factory('IdService', [function($scope) {
+app.service('IdService', [function($scope) {
   this.setId = function($id){
     $scope.classId = $id;
     return $scope.classId;
