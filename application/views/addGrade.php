@@ -25,7 +25,7 @@
     				
 					jQuery.ajax({
 						type: "POST",
-						url: "<?php echo base_url(); ?>" + "/index.php/Grades_controller/newAssignment",
+						url: "/index.php/Grades_controller/newAssignment",
 						dataType: 'json',
 						//console.log($results);
 						data: {name: ass_name, desc: description, pp: pointsPossible, nn: nickname }
