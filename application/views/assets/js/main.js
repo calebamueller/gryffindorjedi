@@ -21,9 +21,9 @@ app.config(['$routeProvider', function($routeProvider) {
 // Home
 
 
-        .when("/", {templateUrl: "application/views/partials/default.php", controller: "PageCtrl"})
-        .when("/home", {templateUrl: "application/views/partials/default.php", controller: "PageCtrl"})
-        .when("/class", {templateUrl: "application/views/partials/class.php", controller: "PageCtrl"});
+        .when("/", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
+        .when("/home", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
+        .when("/class", {templateUrl: "application/ng/partials/class.php", controller: "PageCtrl"});
        
 }]);
 
