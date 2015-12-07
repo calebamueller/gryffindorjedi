@@ -3,20 +3,29 @@
 <head>
 	 
 	<style>
-	
-		.bg{
-			background: #282828 !important;
-
+		#content{
+			width: 500px;
 		}
 		
 		#header{
 		  	  font-size: 35px;
 			  width: 100%;
-			  margin: auto;
+			  margin: 0 auto;
 			  position: center;
 			  height: 50px;
 			  border: 10px;
 			  color: #FFF;
+			  background #282828;
+		}
+		
+		#name{
+			 font-size: 20px;
+			  width: 50%;
+			  margin: 0 auto;
+			  height: 25px;
+			  border: 5px;
+			  color: #FFF;
+			  background #282828;
 		}
 		
 		
