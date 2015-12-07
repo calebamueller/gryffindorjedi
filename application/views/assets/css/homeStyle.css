@@ -184,6 +184,14 @@ label {
   color: white;
 }
 
+.form-title {
+  color: white;
+}
+
+input[type=file] {
+  color: white;
+}
+
 
   
 
