@@ -9,7 +9,7 @@
 			  width: 100%;
 			  margin: auto;
 			  position: center;
-			  background: #FFF;
+			  background: #282828;
 			  height: 50px;
 			  border: 10px;
 			  color: black;
