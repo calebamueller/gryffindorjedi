@@ -44,11 +44,11 @@ app.controller('ClassCtrl', function ($scope, $http, $location) {
     $scope.createUrl = function(event){
       console.log(event.target.id);
       $scope.id = event.target.id;
-      $http.get('index.php/home/getclass/'+$scope.id)
-        .success(function(data){
-        $scope.class = data;
-        console.log(data);
-      });
+              $http.get('index.php/home/getclass/'+$scope.id)
+          .success(function(data){
+          $scope.classes = data;
+          console.log(data);
+        });
   }
   
   $scope.go = function (path) {

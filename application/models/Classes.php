@@ -11,6 +11,12 @@
     $this->db->from('assignments');
     $this->db->where('class_id', $id);
     $query = $this->db->get();
-    return $query->result();
+    foreach($query->result() as $row){
+      $array[] = array(
+        'assignments'=>$row
+        );
+    }
+    
+    return $array;
   }
 }
