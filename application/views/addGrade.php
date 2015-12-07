@@ -35,6 +35,7 @@
 			<input type="text" name="nickname" value="nickname">
 		
 			<input type="button" name="addAssignment" value="Add"></input>
+>>>>>>> johns
 			
 	</body>
 

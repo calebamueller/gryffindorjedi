@@ -23,12 +23,7 @@ app.config(['$routeProvider', function($routeProvider) {
 
         .when("/", {templateUrl: "application/views/partials/default.php", controller: "PageCtrl"})
         .when("/home", {templateUrl: "application/views/partials/default.php", controller: "PageCtrl"})
-        .when("/class", {templateUrl: "application/views/partials/class.php", controller: "PageCtrl"}); 
-  
-//        .when("/", {templateUrl: "partials/default.php", controller: "PageCtrl"})
-  //      .when("/home", {templateUrl: "partials/default.php", controller: "PageCtrl"})
-    //    .when("/class", {templateUrl: "partials/class.php", controller: "PageCtrl"});
-        
+        .when("/class", {templateUrl: "application/views/partials/class.php", controller: "PageCtrl"});
        
 }]);
 

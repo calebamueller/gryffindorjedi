@@ -4,14 +4,11 @@
 		public function __construct()
   		{
 			parent::__construct();
-
 			
   		}
   		
   		public function index()
   		{
-  			$data['class_id'] = '';//how are we passing this info?
-			$data['username'] = '';//teacher username and how are we limiting the teachers to this view?
   			$this->load->database();
   			$this->load->model('Grades_model');
 			$this->load->view('addGrade');
