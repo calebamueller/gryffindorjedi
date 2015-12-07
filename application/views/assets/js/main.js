@@ -35,6 +35,8 @@ app.factory('IdService', [function($scope) {
   this.getId = function($id) {
     return $scope.id;
   }
+  
+  return $scope.id;
 }]);
 
 app.controller('PageCtrl', function($scope, $location, $http) {
