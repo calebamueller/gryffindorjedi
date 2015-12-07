@@ -26,6 +26,23 @@
 				});
 			});
 			
+			$("#addAssignment").click(function() {
+    				console.log("doctor doctor manana");
+    				var ass_name = $("#assignName").val();
+					var description = $("#description").val();
+					var pointsPossible = $("#pointsPossible").val();
+					var nickname = $("#nickname").val();
+    				
+					.ajax({
+						type: "POST",
+						url: "<?php echo base_url(); ?>" + "/index.php/Grades_controller/newAssignment",
+						dataType: 'json',
+						console.log($results);
+						data: {name: ass_name, desc: description, pp: pointsPossible, nn: nickname }
+						});
+						
+				});
+			
 			
 		</script>
 			<input type="text" id="assignName" name="assignName" value="assignName"></input>
