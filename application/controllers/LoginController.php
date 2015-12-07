@@ -127,9 +127,9 @@ class LoginController extends CI_Controller {
   }
 
   public function logout() {
-    $this->load->library('facebook');
+    //$this->load->library('facebook');
     // Logs off session from website
-    $this->facebook->destroySession();
+    //$this->facebook->destroySession();
     // Make sure you destory website session as well.
     redirect('LoginController/login');
     $this->session->sess_destroy();
