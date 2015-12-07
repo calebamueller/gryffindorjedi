@@ -20,7 +20,7 @@
 			//$resourceInfo = $this->Grades_model->returnAssignments($class_id);
 		}
 		
-		public function newAssignment($data)
+		public function newAssignment()
 		{
 			$this->load->database();
   			$this->load->model('Grades_model');
@@ -31,8 +31,16 @@
 			$points_possible = $_POST['pp'];
 			$username = $_POST['nn'];
 			$class_id = $_POST['cid'];*/
+			$ass_name = $this->input->post('name');
+   			$description = $this->input->post('desc');
+   			$pointsPoss = $this->input->post('pp');
+   			$uid = $this->input->post('nn');
+   			$cid = $this->input->post('cid');
+
+
+
 			
-		 	$this->Grades_model->newAssignment($data['name'], $data['desc'], $data['pp'], $data['nn'], $data['cid']);
+		 	$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
 		 	$result = "success";
 		 	
 		 	return $result;
