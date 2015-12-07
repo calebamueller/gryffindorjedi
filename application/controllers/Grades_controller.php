@@ -50,7 +50,7 @@
 		 		echo "it worked";
 		 	}else
 		 	{
-		 		echo "not a thing will work"
+		 		echo "not a thing will work";
 		 	}
 		 	$result = "success";
 		 	
