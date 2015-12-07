@@ -40,7 +40,7 @@ app.controller('PageCtrl', function($scope, $location, $http) {
   console.log("Page Controller is GO");
 });
 
-app.controller('PeopleCtrl', function ($scope, $http, $location) {
+app.controller('PeopleCtrl', function ($scope, $http, $location, IdService) {
   $scope.people = []
   $http.get('index.php/home/users')
     .success(function(data) {
@@ -60,7 +60,7 @@ app.controller('PeopleCtrl', function ($scope, $http, $location) {
   
 });
 
-app.controller('ClassCtrl', function ($scope, $http, $location) {
+app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
   
   var $id = IdService.getId;
   
