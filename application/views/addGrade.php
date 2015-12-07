@@ -6,9 +6,10 @@
 		#header{
 		  	  font-size: 35px;
 			  width: 100%;
+			  margin: auto;
 			  position: center;
 			  background: #fff;
-			  height: 75px;
+			  height: 50px;
 			  border: 10px;
 			  color: black;
 		}
