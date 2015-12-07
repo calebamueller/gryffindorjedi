@@ -6,12 +6,8 @@ class LoginController extends CI_Controller {
     parent::__construct();
     $this->load->database();
     $this->load->library(array('session', 'encryption', 'form_validation'));
-    //$this->load->library('encryption');
     $this->load->helper(array('security', 'url','form'));
-    //$this->load->helper('url');
     $this->load->model('Loginmod');
-    //$this->load->helper('form');
-    //$this->load->library('form_validation');
   }
 
 
@@ -51,7 +47,7 @@ class LoginController extends CI_Controller {
 
         }
         else {
-          //echo 'Please Enter a Username and Password';
+          echo 'Please Enter a Username and Password';
         }
       }
       else {
@@ -106,7 +102,6 @@ class LoginController extends CI_Controller {
         //hash and salt password
         $salt = mt_rand();
         $pwSalt = $salt.$password;
-        //$hash = $this->encrypt->sha1($password);
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
         $data = $this->Loginmod->check($username);

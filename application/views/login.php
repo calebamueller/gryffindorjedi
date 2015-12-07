@@ -40,15 +40,17 @@
                     <div class="col-xs-12 col-sm-4" id="right">
                         <form action="/home" class="row col-xs-12 col-sm-10 col-sm-offset-1" id="signin">
                         <h1>Sign-In</h1>
+                          <?php echo form_open('LoginController/index'); ?>
                           <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <label for="username">Email address</label>
+                            <input type="email" class="form-control" id="username" name="username" placeholder="Email" value="<?php echo set_value('username'); ?>" />
                           </div>
                           <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="<?php echo set_value('password'); ?>" />
                           </div>
-                          <button type="submit" class="btn btn-default" onclick="location.href='http://slateproject.me/gryffindorjedi/application/views/home.php'">Sign-in</button>
+                          <button type="submit" class="btn btn-default" onclick="location.href='http://slateproject.me/index.php/home.php'">Sign-in</button>
+                        <?php echo form_close(); ?>
                         </form>
                         <div class="row col-xs-12" id="signup">
                           <h3>Need an account?<br><a href="http://slateproject.me/index.php/LoginController/register">Sign Up</a></h3>
