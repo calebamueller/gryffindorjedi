@@ -34,7 +34,7 @@
 			
 			$data = json_encode($this)
 			
-			return $data;
+			//return $data;
 		}
 		
 		public function newAssignment()
