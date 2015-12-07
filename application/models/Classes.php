@@ -1,4 +1,4 @@
-<?php class ClassInfo extends CI_Model {
+<?php class Classes extends CI_Model {
   
   function __construct() {
     parent::__construct();
