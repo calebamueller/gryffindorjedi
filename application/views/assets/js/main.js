@@ -83,9 +83,22 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
   
   $scope.update = function(classes) {
     $scope.master = angular.copy(classes);
-    $http.post('index.php/Home/announcements/')
-    .success(function(response){
-      console.log(response);
+//    $http.post('index.php/Home/announcements/')
+//    .success(function(response){
+//      console.log(response);
+//    });
+    var FormData = {
+      'id' : $scope.master.id,
+      'announcement' : $scope.master.announcement
+    };
+    $http({
+      method: 'POST',
+      url: 'index.php/Home/announcements',
+      data: FormData,
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+      .success(function(response) {
+        console.log(response);
+      });
     });
   };
   
