@@ -35,10 +35,10 @@
 					jQuery.ajax({
 						type: "POST",
 						url: "/index.php/Grades_controller/newAssignment",
-						//dataType: 'json',
-						contentType: "application/json; charset=utf-8",
+						dataType: 'json',
+						//contentType: "application/json; charset=utf-8",
 						//console.log($result);
-						data: {'name': 'assignName'},
+						data: assInfo,
 						/*success: function(data){
                 			alert('Items added');
             			},

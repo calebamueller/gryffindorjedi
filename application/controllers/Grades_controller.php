@@ -39,9 +39,21 @@
    			$uid = $_POST['nn'];
    			$cid = $_POST['cid'];
    			
-   			if( $_POST['name'] == "assignName")
+   			echo "this is the bare minimum";
+   			
+   			$info = $_POST['assInfo'];
+   			
+   			if( $info['name'] == "assignName")
    			{
    				echo "ok";
+   			}
+   			if(isset($info))
+   			{
+   				echo "doing something right";
+   			}
+   			if(isset($_POST['assInfo']))
+   			{
+   				echo "at least its something";
    			}
    			
    			//echo $ass_name;
