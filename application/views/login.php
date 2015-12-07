@@ -40,13 +40,14 @@
                     <div class="col-xs-12 col-sm-4" id="right">
                         <form action="/home" class="row col-xs-12 col-sm-10 col-sm-offset-1" id="signin">
                         <h1>Sign-In</h1>
+                        <?php echo form_open('LoginController/index'); ?>
                           <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <input type="email" class="form-control" id="username" name="username" placeholder="Email" value="<?php echo set_value('username'); ?>" >
                           </div>
                           <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="<?php echo set_value('password'); ?>" >
                           </div>
                           <button type="submit" class="btn btn-default" href="http://slateproject.me/index.php/LoginController/index">Sign-in</button>
                         </form>
@@ -54,7 +55,7 @@
                           <h3>Need an account?<br><a href="http://slateproject.me/index.php/LoginController/register">Sign Up</a></h3>
                           <!-- <h3>Need an account?<br><a href="registration.php">Sign Up</a></h3>-->
                         </div>
-
+                        <?php echo form_close(); ?>
                     </div>
             </div>
         </div>
