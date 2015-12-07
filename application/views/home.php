@@ -81,9 +81,7 @@
                     <div class="col-sm-3" id="chat">
                     <button ng-controller='PeopleCtrl' ng-click="go('/chat')">Chat</button>
                     </div>
-                    <div class="col-sm-12" id="timeline">
-                        Timeline
-                    </div>
+                    
                 </div>
             </div>
         </div>
