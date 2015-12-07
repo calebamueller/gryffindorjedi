@@ -14,8 +14,8 @@
   		
   		public function index()
   		{
-  			$uid = ($_POST['user_id']);
-  			$cid = ($_POST['class_id']);
+  			//$uid = ($_POST['user_id']);
+  			//$cid = ($_POST['class_id']);
   			$this->load->database();
   			$this->load->model('Grades_model');
 			$this->load->view('addGrade');
