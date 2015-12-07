@@ -27,11 +27,11 @@ app.config(['$routeProvider', function($routeProvider) {
        
 }]);
 
-app.factory('IdService', [function() {
+app.service('IdService', [function() {
   var $classId = 0;
   this.setId = function($id){
     $classId = $id;
-    //return $classId;
+    console.log($classId);
   }
   this.getId = function() {
     return $classId;
