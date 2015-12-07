@@ -5,7 +5,7 @@
         <title>Home</title>
         
 <!--        <link rel=stylesheet href="<?//php echo base_url('assets/css/homeStyle.css')?>">-->
-                <link rel=stylesheet href="../assets/css/homeStyle.css">
+                <link rel=stylesheet href="application/views/assets/css/homeStyle.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
@@ -19,7 +19,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         
 <!--        <link rel="stylesheet" href="<?//php base_url('..css/style.css')?>">-->
-        <link rel="stylesheet" href="../../assets/css/style.css">
+        <link rel="stylesheet" href="application/views/assets/css/style.css">
         <link href='https://fonts.googleapis.com/css?family=Exo+2:400,200' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         
@@ -27,7 +27,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
         
 <!--        <script src="<?php //echo base_url('assets/js/angular.js')?>"></script>-->
-        <script src="../assets/js/main.js"></script>
+        <script src="application/views/assets/js/main.js"></script>
     
       <script>
 //        $(document).ready(function() {
