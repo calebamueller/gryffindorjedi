@@ -21,9 +21,10 @@ app.config(['$routeProvider', function($routeProvider) {
 // Home
 
 
-        .when("/", {templateUrl: "application/views/partials/default.php", controller: "PageCtrl"})
-        .when("/home", {templateUrl: "application/views/partials/default.php", controller: "PageCtrl"})
-        .when("/class", {templateUrl: "application/views/partials/class.php", controller: "PageCtrl"});
+        .when("/", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
+        .when("/home", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
+        .when("/class", {templateUrl: "application/ng/partials/class.php", controller: "PageCtrl"})
+        .when("/announcement", {templateUrl: "application/ng/partials/announcements.php", controller: "PageCtrl"});
        
 }]);
 
@@ -76,6 +77,56 @@ app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
           console.log(data);
         });
 });
+
+app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
+  $scope.master = {};
+  
+  $scope.update = function(classes) {
+    $scope.master = angular.copy(classes);
+//    $http.post('index.php/Home/announcements/')
+//    .success(function(response){
+//      console.log(response);
+//    });
+    var FormData = {
+      'id' : $scope.master.id,
+      'announcement' : $scope.master.announcement
+    };
+    $http({
+      method: 'POST',
+      url: 'index.php/Home/announcements',
+      data: FormData,
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    })
+      .success(function(response) {
+        console.log(response);
+      });
+  };
+  
+//  $scope.getId = function() {
+//    var $id = IdService.getId();
+//    console.log('Announce'+$id);
+//  };
+  
+//  $http.post('index.php/Home/announcements/'+$id)
+//    .success(function(data){
+//    console.log(data);
+//  });
+    $scope.go = function (path) {
+    $location.path(path);
+  };
+  
+});
+
+//app.controller('announceCtrl', function ($scope, $http, $location, IdService) {
+//  $scope.announce = function () {
+//  $scope.annoucement = '';
+//  var $id = IdService.getId();
+//  $http.post('index.php/home/makeAnnouncement/'+$id+$scope.announcement)
+//    .success(function(data){
+//      alert("success");
+//  });
+//  };
+//};
 
 
     

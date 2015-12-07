@@ -3,9 +3,9 @@
     <h2>Due</h2>
     <div class="col-sm-12" id="due">
       <div ng-repeat="assignment in classes">
-        <h3>{{assignment.assignments.ass_name}}<br></h3>
-        <h3>{{assignment.assignments.ass_description}}<br></h3>
-        <h3>{{assignment.assignments.points_possible}}<br></h3>
+        <h3>Assignment:  {{assignment.assignments.ass_name}}<br></h3>
+        <h3>Description:  {{assignment.assignments.ass_description}}<br></h3>
+        <h3>Points Possible:  {{assignment.assignments.points_possible}}<br></h3>
         
       </div>
     </div>
@@ -16,6 +16,8 @@
       <div ng-repeat="class in classes">
         <h3>{{class.announcements.announcement}}</h3>
       </div>
+      
+      <button class='btn btn-default' ng-controller="PeopleCtrl" ng-click="go('/announcement')">Make an Announcement</button>
     </div>
   </div>
   <div class="row">
