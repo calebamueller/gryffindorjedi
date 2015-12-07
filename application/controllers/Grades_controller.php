@@ -70,6 +70,7 @@
  			}
 
 		 	$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
+
 			redirect('Home/index', 'refresh');
 
 		}
