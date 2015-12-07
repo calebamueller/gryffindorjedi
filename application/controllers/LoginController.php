@@ -27,11 +27,6 @@ class LoginController extends CI_Controller {
           $username = $_POST['username'];
           $password = $_POST['password'];
 
-          echo $username;
-          echo $password;
-          echo $loggedin;
-
-
           $data = $this->Loginmod->login($username, $password);
 
           echo $data;
