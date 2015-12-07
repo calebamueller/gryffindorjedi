@@ -43,15 +43,7 @@
    			echo $_POST['name'];
    			echo json_encode($ass_name);
    			
-   			if(isset($ass_name)){
-		 		$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
-		 	}else if(isset($_POST['name']))
-		 	{
-		 		echo "it worked";
-		 	}else
-		 	{
-		 		echo "not a thing will work";
-		 	}
+		 	$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
 		 	$result = "success";
 		 	
 		 	return $result;

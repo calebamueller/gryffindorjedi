@@ -27,6 +27,11 @@
 					var pointsPossible = $("#pointsPossible").val();
 					var nickname = $("#nickname").val();
     				var classID = $("#classID").val();
+    				var name;
+    				var desc;
+    				var pp;
+    				var nn;
+    				var cid;
     				
     				console.log(ass_name);
     				
@@ -34,7 +39,7 @@
 						type: "POST",
 						url: "/index.php/Grades_controller/newAssignment",
 						dataType: 'json',
-						contentType: "application/json; charset=utf-8",
+						//contentType: "application/json; charset=utf-8",
 						//console.log($result);
 						data: {name: ass_name, desc: description, pp: pointsPossible, nn: nickname, cid: classID },
 						success: function(data){
