@@ -1,4 +1,4 @@
-<div class="col-sm-10" id="classes">
+<div class="col-sm-12" id="classes">
         <div id="top" ng-controller="PeopleCtrl">
           <div ng-repeat="person in people">
             
