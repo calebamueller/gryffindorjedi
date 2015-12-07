@@ -16,6 +16,8 @@
       <div ng-repeat="class in classes">
         <h3>{{class.announcements.announcement}}</h3>
       </div>
+      
+      <button class='btn btn-default'>Make an Announcement</button>
     </div>
   </div>
   <div class="row">
