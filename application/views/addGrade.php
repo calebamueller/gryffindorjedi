@@ -33,8 +33,7 @@
     				var nn;
     				var cid;
     				
-    				var data = {"name": ass_name, "desc": description, "pp": pointsPossible, "nn": nickname, "cid": classID };
-    				//console.log(ass_name);
+    				console.log(ass_name);
     				
 					jQuery.ajax({
 						type: "POST",
@@ -42,7 +41,7 @@
 						dataType: 'json',
 						contentType: "application/json; charset=utf-8",
 						//console.log($result);
-						data: data,
+						data: {name: ass_name}, //, desc: description, pp: pointsPossible, nn: nickname, cid: classID },
 						success: function(data){
                 			alert('Items added');
             			},

@@ -42,16 +42,12 @@
    			//echo $ass_name;
    			//echo $_POST['name'];
    			//echo json_encode($ass_name);
-   			if(isset($_POST['data']))
-   			{
-   				$data = $_POST['data'];
-		 		//$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
-		 		$this->Grades_model->newAssignment($data['name'], $data['desc'], $data['pp'], $data['nn'], $data['cid']);
-		 		
-		 	}
-		 	//$result = "success";
+   			
+   			
+		 	$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
+		 	$result = "success";
 		 	
-		 	//return $result;
+		 	return $result;
 		}
 		
 		public function removeResource($resourceID)
