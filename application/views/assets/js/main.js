@@ -31,7 +31,7 @@ app.service('IdService', [function() {
   var $classId = 0;
   this.setId = function($id){
     $classId = $id;
-    return $classId;
+    //return $classId;
   }
   this.getId = function() {
     return $classId;
