@@ -39,7 +39,7 @@
    			$uid = $_POST['nn'];
    			$cid = $_POST['cid'];
    			
-   			if( $_POST['assignmentName'] == "assignName")
+   			if( $_POST['name'] == "assignName")
    			{
    				echo "ok";
    			}
