@@ -1,4 +1,4 @@
-<form action='Grades_controller/newAssignment' method='post'>
+<form action='index.php/Grades_controller/newAssignment' method='post'>
 <div class="reg_form">
 <div class="form_title">Add Resource</div>
  <?php //echo form_open("Grades_controller/newAssignment"); ?>
