@@ -60,8 +60,6 @@ app.controller('ClassCtrl', function ($scope, $http, $location) {
           $scope.classes = data;
           console.log(data);
         });
-    }
-  
 });
 
 app.service('idService', function($scope) {
