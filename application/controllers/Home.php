@@ -12,5 +12,13 @@ class Home extends CI_Controller {
         $info = json_encode($data);
         echo $info;
     }
+  
+    public function getClass($id) {
+      $this->load->database();
+      $this->load->model('Classinfo');
+        $data=$this->ClassInfo->getClassInfo($id);
+        $info = json_encode($data);
+        echo $info;
+    }
 }
 ?>
