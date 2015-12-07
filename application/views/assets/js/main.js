@@ -65,6 +65,7 @@ app.controller('ClassCtrl', function ($scope, $http, $location) {
 app.service('idService', function($scope) {
   this.setId = function($id){
     $scope.classId = $id;
+  }
   this.getId = function($id) {
     return $scope.id;
   }
