@@ -19,6 +19,7 @@
 			'class1' => $row
 		);
 	}
+
 	$this->db->select('c.class_name, c.instructor');
 	$this->db->from('classes as c');
 	$this->db->join('users as d', 'c.class_id = d.class2');
@@ -53,6 +54,7 @@
 	}
 
 	return $array;
+
 
   }
 
