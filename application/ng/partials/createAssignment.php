@@ -3,19 +3,19 @@
  <?php //echo form_open("Grades_controller/newAssignment"); ?>
   <p>
   <label for="assignment_name">Assignment Name:</label>
-  <input type="text" id="name" name="name" value="<?php //echo set_value('name'); ?>" ng-model="classes.name" />
+  <input type="text" id="name" name="name" value="<?php //echo set_value('name'); ?>" ng-model="ass.name" />
   </p>
   <p>
   <label for="desc">Description:</label>
-  <input type="text" id="desc" name="desc" value="<?php //echo set_value('desc'); ?>" ng-model="classes.desc"/>
+  <input type="text" id="desc" name="desc" value="<?php //echo set_value('desc'); ?>" ng-model="ass.desc"/>
   </p>
   <p>
   <label for="pointsPoss">Points Possible:</label>
-  <input type="text" id="pp" name="pp" value="<?php //echo set_value('pp'); ?>" ng-model="classes.pp"/>
+  <input type="text" id="pp" name="pp" value="<?php //echo set_value('pp'); ?>" ng-model="ass.pp"/>
   </p>
   
   <p>
-  <input type="submit" value="Submit" ng-click="update(classes)"/>
+  <input type="submit" value="Submit" ng-click="update(ass)"/>
   </p>
  <?php //echo form_close(); ?>
  
