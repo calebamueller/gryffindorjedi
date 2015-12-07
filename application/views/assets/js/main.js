@@ -60,7 +60,7 @@ app.controller('PeopleCtrl', function ($scope, $http, $location) {
   
 });
 
-app.controller('ClassCtrl', function ($scope, $http, $location, 'IdService') {
+app.controller('ClassCtrl', function ($scope, $http, $location) {
   
   var $id = IdService.getId;
   
