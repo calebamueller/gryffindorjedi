@@ -31,7 +31,6 @@ class Home extends CI_Controller {
       //$id = $_POST['id'];
       $this->load->model('Classes');
       $this->db->announce($id, $announcement);
-      echo $data;
        
     }
 }
