@@ -51,7 +51,7 @@ class LoginController extends CI_Controller {
 
         }
         else {
-          //echo 'Please Enter a Username and Password';
+          echo 'Please Enter a Username and Password';
         }
       }
       else {
