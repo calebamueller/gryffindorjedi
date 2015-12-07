@@ -6,8 +6,8 @@ var io = require('socket.io')(http);
 //var port process.env.PORT || 3000;
 var users = {}
 
-http.listen(80, function(){
-		console.log('listening on *:80');
+http.listen(8080, function(){
+		console.log('listening on *:8080');
 });
 
 app.get('/', function(req, res){
