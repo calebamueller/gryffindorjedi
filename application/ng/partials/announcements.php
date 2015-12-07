@@ -1,5 +1,5 @@
-<?php echo form_open('Home/announcements');?>
 
-<textarea name="announcement" value="<?php set_value('announcement');?>" ></textarea>
+<form action="Home/announcements" method="POST">
+<textarea name="announcement" value="" ></textarea>
 <input type='submit' value="Announce!">
-<?php echo form_close();?>
+</form>
