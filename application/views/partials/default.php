@@ -14,7 +14,9 @@
               <p>{{person.class5.class_name}}</p>
               <p>{{person.class5.instructor}}</p>
               <p>{{person.class6.class_name}}</p> 
-              <p>{{person.class6.instructor}}</p>  
+              <p>{{person.class6.instructor}}</p>
+              
+              <button class='btn-default'>{{person}}</button>
               
             </div>
           </div>
