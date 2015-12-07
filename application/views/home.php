@@ -26,7 +26,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
         
 <!--        <script src="<?php //echo base_url('assets/js/angular.js')?>"></script>-->
-        <script src="../views/assets/js/main.js"></script>
+        <script src="assets/js/main.js"></script>
     
       <script>
 //        $(document).ready(function() {
