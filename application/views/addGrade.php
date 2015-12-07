@@ -4,8 +4,7 @@
 	 
 	<style>
 		#header{
-		  	  font-size: 35;
-		  	  font-style: helvetica;
+		  	  font-size: 35px;
 			  width: 100%;
 			  position: center;
 			  background: #fff;
