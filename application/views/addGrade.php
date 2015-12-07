@@ -16,14 +16,22 @@
   <label for="pointsPoss">Points Possible:</label>
   <input type="text" id="pp" name="pp" value="<?php echo set_value('pp'); ?>" />
   </p>
-  <p>
-  <label for="fileInput">File Upload</label>
-  <input type="file" id="doc" name="doc" value="<?php echo set_value('doc'); ?>" />
-  </p>
+  
   <p>
   <input type="submit" value="Submit" />
   </p>
  <?php echo form_close(); ?>
+ 
+ <?php echo form_open("php upload.php " + ""); ?>
+ <p>
+  <label for="fileInput">File Upload</label>
+  <input type="file" id="doc" name="doc" value="" />
+  </p>
+  <p>
+  <input type="submit" value="Submit" />
+  </p>
+  <?php echo form_close(); ?>
+  
 </div><!--<div class="reg_form">-->
 </div><!--<div id="content">-->
 </html>

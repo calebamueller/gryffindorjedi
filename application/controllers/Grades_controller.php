@@ -21,10 +21,20 @@
 			$this->load->view('addGrade');
   		}
 		
-		public function returnAssignments($class_id)
+		public function returnAssignments()
 		{
-			//this->class_id = $data['class_id'];
-			//$resourceInfo = $this->Grades_model->returnAssignments($class_id);
+			$this->load->database();
+  			$this->load->model('Grades_model');
+			$this->load->view('displayResources');
+			
+			//$cid = ($_POST['class_id']);
+			$cid = 1;
+			
+			$data = $this->Grades_model->returnAssignments($cid);
+			
+			$data = json_encode($this)
+			
+			return $data;
 		}
 		
 		public function newAssignment()
@@ -43,7 +53,7 @@
    			
    			if(strlen($ass_name)<3)
    			{
-   			
+   				
    			}
    			
    			if($pointsPoss<=0)
