@@ -7,7 +7,7 @@
   <input type="text" id="name" name="name" value="<?php //echo set_value('name'); ?>" ng-model="ass.name" />
     
   <label for="assignment_name">Class ID:</label>
-  <input type="text" id="id" name="class_id" value="<?php //echo set_value('name'); ?>" ng-model="ass.name" />
+  <input type="text" id="id" name="class_id" value="<?php //echo set_value('name'); ?>" ng-model="ass.id" />
   </p>
   <p>
   <label for="desc">Description:</label>
@@ -33,7 +33,6 @@
   </p>
   <?php //echo form_close(); ?>
   
-  <pre>ass.name | json</pre>
   
 </div><!--<div class="reg_form">-->
 </form>
