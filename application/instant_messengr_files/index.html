@@ -49,6 +49,7 @@
     <script src = "https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src = "http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
+    $(document).ready(function() {
     	var socket = io();
     	
     	$('#setName').submit(function(e){
@@ -90,6 +91,7 @@
     	socket.on('whisper', function(data){
     		$('#m').append('<span class="whisper"><b>' + data.nick + ': </b>' + data.msg + "</span><br/>");
     	});
+    });
     </script>
   
   </body>
