@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-  		<script src="jquery-1.11.3.min.js"></script>
-  		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			<script src="jquery-1.11.3.min.js"></script>
 	</head>
 	<body>
 	
