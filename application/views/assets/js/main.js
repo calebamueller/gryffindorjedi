@@ -82,7 +82,7 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
   $scope.master = {};
   
   $scope.update = function($id) {
-    $scope.master = angular.copy(user);
+    $scope.master = angular.copy(classes);
     console.log($scope.master);
   };
   
