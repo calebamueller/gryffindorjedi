@@ -66,7 +66,7 @@ app.controller('PeopleCtrl', function ($scope, $http, $location, IdService) {
 });
 
 app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
-  
+  $scope.classes = []
   var $id = IdService.getId();
   console.log($id);
   console.log('I have the stuff');

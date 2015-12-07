@@ -4,7 +4,7 @@
     <div class="col-sm-12" id="due">
 
       <div ng-repeat="assignment in classes">
-        <h3>{{assignment.ass_name}}<br></h3>
+        <h3>{{assignment.assignments.ass_name}}<br></h3>
       </div>
 
       
