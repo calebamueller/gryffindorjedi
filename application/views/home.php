@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="webApp">
+  
+  <?php $this->load->helper('html');
     <head>
         <title>Home</title>
         
