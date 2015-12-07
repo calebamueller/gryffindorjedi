@@ -31,7 +31,9 @@
   }
   
   public function announce($id, $data) {
+    
     $this->db->where('class_id', $id);
-    $this->db->update('mytable', $data);
+    $this->db->update('classes', $data);
+    
   }
 }
