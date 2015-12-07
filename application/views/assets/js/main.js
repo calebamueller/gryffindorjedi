@@ -42,15 +42,9 @@ app.controller('PeopleCtrl', function ($scope, $http, $location) {
   $scope.createUrl = function(event){
       console.log(event.target.id);
       $scope.id = event.target.id;
-  $scope.classes = []  
-  $http.get('index.php/home/getclass/'+$scope.id)
-          .success(function(data){
-          $scope.classes = data;
-          console.log(data);
-        });
-  }
+      idService.setId($scope.id);
   
-  $scope.go = function (path) {
+   $scope.go = function (path) {
     $location.path(path);
   };
   
@@ -58,8 +52,25 @@ app.controller('PeopleCtrl', function ($scope, $http, $location) {
 
 app.controller('ClassCtrl', function ($scope, $http, $location) {
   
+  var $id = idService.getId;
   
+  $http.get('index.php/home/getclass/'+$id)
+          .success(function(data){
+          $scope.classes = data;
+          console.log(data);
+        });
+    }
   
 });
+
+app.service('idService', function($scope) {
+  this.setId = function($id){
+    $scope.classId = $id;
+  this.getId = function($id) {
+    return $scope.id;
+  }
+});
+    
+                    
   
   
