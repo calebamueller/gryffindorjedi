@@ -44,14 +44,14 @@
   			$this->load->helper('form');
 			//$this->load->view('addGrade');
 			
-            $data = json_decode(file_get_contents("php://input"));
-            $ass_name->$data->name;
-            $description= $data->desc;
-            $pointsPoss = $data->pp;
+            //$data = json_decode(file_get_contents("php://input"));
+            //$ass_name->$data->name;
+            //$description= $data->desc;
+            //$pointsPoss = $data->pp;
           
-//			$ass_name = ($_POST['name']);
-//   			$description = ($_POST['desc']);
-//   			$pointsPoss = ($_POST['pp']);
+			$ass_name = ($_POST['name']);
+   			$description = ($_POST['desc']);
+   			$pointsPoss = ($_POST['pp']);
    			
    			$uid = "Jake";
    			$cid = 1;
