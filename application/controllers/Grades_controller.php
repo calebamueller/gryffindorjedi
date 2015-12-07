@@ -12,7 +12,6 @@
   			$this->load->database();
   			$this->load->model('Grades_model');
 			$this->load->view('addGrade');
-			echo "something";
   		}
 		
 		public function returnAssignments($class_id)
@@ -37,25 +36,9 @@
 			$ass_name = $_POST['name'];
    			$description = $_POST['desc'];
    			$pointsPoss = $_POST['pp'];
-   			$uid = $_POST['nn'];
-   			$cid = $_POST['cid'];
    			
-   			echo "this is the bare minimum";
-   			
-   			$info = $_POST['assInfo'];
-   			
-   			if( $info['name'] == "assignName")
-   			{
-   				echo "ok";
-   			}
-   			if(isset($info))
-   			{
-   				echo "doing something right";
-   			}
-   			if(isset($_POST['assInfo']))
-   			{
-   				echo "at least its something";
-   			}
+   			$uid = "Jake";
+   			$cid = "1";
    			
    			//echo $ass_name;
    			//echo $_POST['name'];
