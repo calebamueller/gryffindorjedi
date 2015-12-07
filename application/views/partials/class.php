@@ -29,6 +29,9 @@
     <div class="col-sm-6" id="links">
       <h2>Course Content</h2>
       <div class="col-sm-12" id="ccontent">
+        <form>
+          <input type='file'>
+        </form>
         <h3>Syllabus</h3><br>
         <h3>Important Link1</h3><br>
         <h3>Important Link2</h3><br>
