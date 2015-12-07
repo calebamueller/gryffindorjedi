@@ -32,14 +32,17 @@
 			$ass_description = $_POST['desc'];
 			$points_possible = $_POST['pp'];
 			$username = $_POST['nn'];
-			$class_id = $_POST['cid'];
+			$class_id = $_POST['cid'];*/
 			$ass_name = $_POST['name'];
    			$description = $_POST['desc'];
    			$pointsPoss = $_POST['pp'];
    			$uid = $_POST['nn'];
-   			$cid = $_POST['cid'];*/
+   			$cid = $_POST['cid'];
    			
-   			echo $_POST['assignmentName'];
+   			if( $_POST['assignmentName'] == "assignName")
+   			{
+   				echo "ok";
+   			}
    			
    			//echo $ass_name;
    			//echo $_POST['name'];
