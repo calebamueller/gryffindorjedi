@@ -81,7 +81,7 @@ app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
 app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
   $scope.master = {};
   
-  $scope.update = function($id) {
+  $scope.update = function(classes) {
     $scope.master = angular.copy(classes);
     console.log($scope.master);
   };
