@@ -3,12 +3,12 @@
 <head>
 	 
 	<style>
-		.form_title{
+		#header{
 		  width: 100%;
-		  position: fixed;
+		  position: center;
 		  background: #fff;
   		  height: 75px;
-		  padding-top: 10px;
+		  border: 10px;
           color: black;
 		}
 		
@@ -19,7 +19,7 @@
 </head>
 <div id="content">
 <div class="reg_form">
-<div class="form_title" id="">Add Resource</div>
+<div class="form_title" id="header">Add Resource</div>
  <?php echo form_open("Grades_controller/newAssignment"); ?>
   <p>
   <label for="assignment_name">Assignment Name:</label>
