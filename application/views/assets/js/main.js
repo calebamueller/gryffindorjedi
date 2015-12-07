@@ -39,3 +39,6 @@ app.controller('PeopleCtrl', function ($scope, $http) {
         console.log(data);
     });
 });
+
+app.controller('ClassCtrl', function ($scope, $http) {
+  
