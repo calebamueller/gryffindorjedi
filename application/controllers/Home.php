@@ -24,15 +24,12 @@ class Home extends CI_Controller {
   
     public function announcements(){
       $this->load->database();
-      //$this->load->library('form_validation');
-      //$this->load->helper('form');
+      $this->load->model('Classes');
       $data = json_decode(file_get_contents("php://input"));
       $id = $data->id;
       $announcement = $data->announcement;
       echo $id;
       echo $announcement;
-      //$id = $_POST['id'];
-      $this->load->model('Classes');
       $this->Classes->announce($id, $announcement);
        
     }
