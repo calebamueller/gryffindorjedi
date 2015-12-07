@@ -3,9 +3,12 @@
 <head>
 	 
 	<style>
+	
 		.bg{
-			background: #282828;
+			background: #282828 !important;
+
 		}
+		
 		#header{
 		  	  font-size: 35px;
 			  width: 100%;
