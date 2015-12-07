@@ -16,7 +16,7 @@
 	<script>
 			$( document ).ready(function() {
 			
-    			$("#addAssignment").click(function(data) {
+    			$("#addAssignment").click(function() {
     				console.log("doctor doctor manana");
     				var ass_name = $("#assignName").val();
 					var description = $("#description").val();
@@ -27,7 +27,7 @@
 						type: "POST",
 						url: "/index.php/Grades_controller/newAssignment",
 						dataType: 'json',
-						//console.log($results);
+						console.log($result);
 						data: {name: ass_name, desc: description, pp: pointsPossible, nn: nickname }
 						});
 						
