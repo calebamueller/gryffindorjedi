@@ -16,7 +16,7 @@
               <p>{{person.class6.class_name}}</p> 
               <p>{{person.class6.instructor}}</p>
               
-              <button class='btn-default' id='{{person.class1.class_id}}{{person.class2.class_id}}{{person.class3.class_id}}{{person.class4.class_id}}' ng-click="createUrl($event); go('/class')">Enter Class</button>
+              <button class='btn btn-default' id='{{person.class1.class_id}}{{person.class2.class_id}}{{person.class3.class_id}}{{person.class4.class_id}}' ng-click="createUrl($event); go('/class')">Enter Class</button>
               
             </div>
           </div>
