@@ -1,5 +1,5 @@
 <div class="col-sm-9" id="classes">
-        <div id="top" ng-controller="PeopleCtrl"><?php $count=2;?>
+        <div id="top" ng-controller="PeopleCtrl">
           <div ng-repeat="person in people">
             
             <div class="col-sm-4 item" id="item">
