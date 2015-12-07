@@ -10,8 +10,8 @@
 		<script>
 			$( document ).ready(function() {
 			
-    			$('#addAssignment').click(function() {
-    				console.log("all the bad bitches no eh");
+    			$('.addAssignment').click(function() {
+    				console.log("doctor doctor manana");
     				var ass_name = $("#assignName").val();
 					var description = $("#description").val();
 					var pointsPossible = $("#pointsPossible").val();
