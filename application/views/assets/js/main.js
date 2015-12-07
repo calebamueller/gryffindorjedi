@@ -54,7 +54,7 @@ app.controller('PeopleCtrl', function ($scope, $http, $location, IdService) {
   $scope.createUrl = function(event){
       console.log(event.target.id);
       $scope.id = event.target.id;
-      IdService.setId($scope.id);
+      //IdService.setId($scope.id);
   }
   
    $scope.go = function (path) {
