@@ -99,8 +99,7 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
     })
       .success(function(response) {
         console.log(response);
-      })
-    });
+      });
   };
   
 //  $scope.getId = function() {
