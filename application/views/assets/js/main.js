@@ -41,4 +41,9 @@ app.controller('PeopleCtrl', function ($scope, $http) {
 });
 
 app.controller('ClassCtrl', function ($scope, $http) {
+  $scope.showAlert = function(event){
+    alert(event.target.id);
+  }
+});
+  
   
