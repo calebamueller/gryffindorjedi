@@ -3,7 +3,6 @@
 <div id="content">
 <div class="reg_form">
 <div class="form_title">Add Resource</div>
- <?php echo validation_errors('<p class="error">'); ?>
  <?php echo form_open("Grades_controller/newAssignment"); ?>
   <p>
   <label for="assignment_name">Assignment Name:</label>
