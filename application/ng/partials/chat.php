@@ -46,7 +46,8 @@
     	<div id="users"></div>
     </div>
     
-    <script src = "https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<!--    <script src = "https://cdn.socket.io/socket.io-1.2.0.js"></script>-->
+<script src="http://localhost:8080/socket.io/socket.io.js"></script>
     <script src = "http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
     	var socket = io();
