@@ -1,4 +1,5 @@
-<div class="reg_form" ng-controller="assignCtrl">
+<form action='Grades_controller/newAssignment' method='post'>
+<div class="reg_form">
 <div class="form_title">Add Resource</div>
  <?php //echo form_open("Grades_controller/newAssignment"); ?>
   <p>
@@ -32,3 +33,4 @@
   <pre>ass.name | json</pre>
   
 </div><!--<div class="reg_form">-->
+</form>
