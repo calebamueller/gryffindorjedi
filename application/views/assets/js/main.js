@@ -98,7 +98,7 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
       .success(function(response) {
         console.log(response);
-      });
+      })
     });
   };
   
