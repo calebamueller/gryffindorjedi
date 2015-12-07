@@ -13,7 +13,9 @@
   <div class="col-sm-6" id="center">
     <h2>Announcements</h2>
     <div class="col-sm-12" id="messages">
-      <p>admin/</p><h3>Welcome to Slate</h3><br>
+      <div ng-repeat="class in classes">
+        <h3>{{class.announcements.announcements}}</h3>
+      </div>
     </div>
   </div>
   <div class="row">
