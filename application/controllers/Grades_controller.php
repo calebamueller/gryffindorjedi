@@ -27,14 +27,14 @@
   			$this->load->model('Grades_model');
 			$this->load->view('displayResources');
 			
-			//$cid = ($_POST['class_id']);
+			/*//$cid = ($_POST['class_id']);
 			$cid = 1;
 			
 			$data = $this->Grades_model->returnAssignments($cid);
 			
 			$data = json_encode($this)
 			
-			//return $data;
+			//return $data;*/
 		}
 		
 		public function newAssignment()
