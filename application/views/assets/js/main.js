@@ -27,13 +27,14 @@ app.config(['$routeProvider', function($routeProvider) {
        
 }]);
 
-app.service('IdService', [function($scope) {
+app.service('IdService', [function() {
+  var $classId = 0;
   this.setId = function($id){
-    $scope.classId = $id;
-    return $scope.classId;
+    $classId = $id;
+    return $classId;
   }
   this.getId = function() {
-    return $scope.classId;
+    return $classId;
   }
   var $dicks = 'Dicks'
   return $dicks;
