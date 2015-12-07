@@ -19,7 +19,9 @@
 			$( document ).ready(function() {
 			
     			$("#addAssignment").click(function() {
-    				console.log("doctor doctor manana");
+    				console.log($("#assignName").val());
+    				
+    				
     				var ass_name = $("#assignName").val();
 					var description = $("#description").val();
 					var pointsPossible = $("#pointsPossible").val();
