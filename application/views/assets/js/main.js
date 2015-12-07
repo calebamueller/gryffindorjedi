@@ -127,8 +127,8 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
 app.controller('assignCtrl', function ($scope, $http, $location, IdService) {
   $scope.master = {};
   
-  $scope.update = function(classes) {
-    $scope.master = angular.copy(classes);
+  $scope.update = function(ass) {
+    $scope.master = angular.copy(ass);
 //    $http.post('index.php/Home/announcements/')
 //    .success(function(response){
 //      console.log(response);
