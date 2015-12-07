@@ -10,7 +10,7 @@
 		<script>
 			$( document ).ready(function() {
 			
-    			$('.addAssignment').click(function() {
+    			$("#addAssignment").click(function() {
     				console.log("doctor doctor manana");
     				var ass_name = $("#assignName").val();
 					var description = $("#description").val();
