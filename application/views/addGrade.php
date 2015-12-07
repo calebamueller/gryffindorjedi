@@ -9,7 +9,7 @@
 		<script>
 			$( document ).ready(function() {
 			
-    			$('addAssignment').click(function() {
+    			$('#addAssignment').click(function() {
     				console.log("all the bad bitches no eh");
     				var ass_name = $("#assignName").val();
 					var description = $("#description").val();
