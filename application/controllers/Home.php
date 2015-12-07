@@ -21,5 +21,14 @@ class Home extends CI_Controller {
         $info = json_encode($data);
         echo $info;
     }
+  
+    public function announcments(){
+      $this->load->library('form_validation');
+      $this->load->helper('form');
+      $announcement = $_POST['announcement'];
+      
+      $this->load->model('Classes');
+      $this->db->announce($id, $announcement);
+    }
 }
 ?>
