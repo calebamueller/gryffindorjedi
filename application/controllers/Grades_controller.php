@@ -38,12 +38,12 @@
 			$points_possible = $_POST['pp'];
 			$username = $_POST['nn'];
 			$class_id = $_POST['cid'];*/
-			$ass_name = $_POST['name'];
-   			$description = $_POST['desc'];
-   			$pointsPoss = $_POST['pp'];
+			$ass_name = ($_POST['name']);
+   			$description = ($_POST['desc']);
+   			$pointsPoss = ($_POST['pp']);
    			
    			$uid = "Jake";
-   			$cid = "1";
+   			$cid = 1;
    			
    			//echo $ass_name;
    			//echo $_POST['name'];

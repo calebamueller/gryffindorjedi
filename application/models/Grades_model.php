@@ -18,7 +18,7 @@
 			return $query->num_rows();
 		}
 
-		public function newAssignment($ass_name, $ass_description, $username, $points_possible, $class_id)
+		public function newAssignment($ass_name, $ass_description, $points_possible, $username, $class_id)
 		{
 			$newAssignment = array(
    				'ass_name' => $ass_name ,
