@@ -32,21 +32,26 @@
 			$ass_description = $_POST['desc'];
 			$points_possible = $_POST['pp'];
 			$username = $_POST['nn'];
-			$class_id = $_POST['cid'];*/
+			$class_id = $_POST['cid'];
 			$ass_name = $_POST['name'];
    			$description = $_POST['desc'];
    			$pointsPoss = $_POST['pp'];
    			$uid = $_POST['nn'];
-   			$cid = $_POST['cid'];
+   			$cid = $_POST['cid'];*/
    			
-   			echo $ass_name;
-   			echo $_POST['name'];
-   			echo json_encode($ass_name);
-   			
-		 	$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
-		 	$result = "success";
+   			//echo $ass_name;
+   			//echo $_POST['name'];
+   			//echo json_encode($ass_name);
+   			if(isset($_POST['data']))
+   			{
+   				$data = $_POST['data'];
+		 		//$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
+		 		$this->Grades_model->newAssignment($data['name'], $data['desc'], $data['pp'], $data['nn'], $data['cid']);
+		 		
+		 	}
+		 	//$result = "success";
 		 	
-		 	return $result;
+		 	//return $result;
 		}
 		
 		public function removeResource($resourceID)
