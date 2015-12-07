@@ -31,7 +31,7 @@ app.controller('PageCtrl', function($scope, $location, $http) {
   console.log("Page Controller is GO");
 });
 
-app.controller('PeopleCtrl', function ($scope, $http) {
+app.controller('PeopleCtrl', function ($scope, $http, $location) {
   $scope.people = []
   $http.get('index.php/home/users')
     .success(function(data) {
