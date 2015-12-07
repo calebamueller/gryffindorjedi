@@ -95,7 +95,8 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
       method: 'POST',
       url: 'index.php/Home/announcements',
       data: FormData,
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    })
       .success(function(response) {
         console.log(response);
       })
