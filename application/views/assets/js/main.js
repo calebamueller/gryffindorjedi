@@ -48,6 +48,7 @@ app.controller('PeopleCtrl', function ($scope, $http) {
           $scope.classes = data;
           console.log(data);
         });
+  }
 });
 
 app.controller('ClassCtrl', function ($scope, $http, $location) {
