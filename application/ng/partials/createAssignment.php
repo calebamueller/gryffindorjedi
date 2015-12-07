@@ -5,6 +5,9 @@
   <p>
   <label for="assignment_name">Assignment Name:</label>
   <input type="text" id="name" name="name" value="<?php //echo set_value('name'); ?>" ng-model="ass.name" />
+    
+  <label for="assignment_name">Class ID:</label>
+  <input type="text" id="id" name="class_id" value="<?php //echo set_value('name'); ?>" ng-model="ass.name" />
   </p>
   <p>
   <label for="desc">Description:</label>

@@ -25,16 +25,17 @@
 			return $array;
 		}
 
-		public function newAssignment($ass_name, $ass_description, $points_possible, $username, $class_id)
+		public function newAssignment($class_id, $ass_name, $ass_description, $points_possible, $username, $class_id)
 		{
 			$newAssignment = array(
+                'class_id' => $class_id,
    				'ass_name' => $ass_name ,
    				'points_possible' => $points_possible,
    				'ass_description' => $ass_description,
    				'username' => $username,
    				'class_id' => $class_id
 			);
-
+            $this->db->where('class_id', $class_id);
 			$this->db->insert('assignments', $newAssignment);
 		}
 		
