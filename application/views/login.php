@@ -49,12 +49,12 @@
                             <label for="password">Password</label>
                             <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="<?php echo set_value('password'); ?>" />
                           </div>
-<<<<<<< HEAD
+
                           <button type="submit" class="btn btn-default" onclick="location.href='http://slateproject.me/index.php/home.php'">Sign-in</button>
                         <?php echo form_close(); ?>
-=======
+
                           <button type="submit" class="btn btn-default" href="http://slateproject.me/index.php/LoginController/index">Sign-in</button>
->>>>>>> develop
+
                         </form>
                         <div class="row col-xs-12" id="signup">
                           <h3>Need an account?<br><a href="http://slateproject.me/index.php/LoginController/register">Sign Up</a></h3>
