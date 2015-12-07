@@ -26,6 +26,8 @@
   			$this->load->model('Grades_model');
   			$this->load->helper('form');
 			$this->load->view('addGrade');
+			
+			
 			/*$ass_name = $_POST['name'];
 			$ass_description = $_POST['desc'];
 			$points_possible = $_POST['pp'];
@@ -36,9 +38,9 @@
    			$pointsPoss = $this->input->post('pp');
    			$uid = $this->input->post('nn');
    			$cid = $this->input->post('cid');
+			
 
-
-
+			echo $ass_name;
 			
 		 	$this->Grades_model->newAssignment($ass_name, $description, $pointsPoss, $uid, $cid);
 		 	$result = "success";
