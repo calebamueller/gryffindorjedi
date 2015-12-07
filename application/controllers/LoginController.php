@@ -7,7 +7,7 @@ class LoginController extends CI_Controller {
     $this->load->database();
     $this->load->library(array('session', 'encryption', 'form_validation'));
     //$this->load->library('encryption');
-    $this->load->helper(array('security', 'url', 'form'));
+    $this->load->helper(array('security', 'form'));
     //$this->load->helper('url');
     $this->load->model('Loginmod');
     //$this->load->helper('form');
@@ -28,7 +28,7 @@ class LoginController extends CI_Controller {
           $username = $_POST['username'];
           $password = $_POST['password'];
 
-          $data = $this->Login->login($username, $password);
+          $data = $this->Loginmod->login($username, $password);
 
           echo $data;
 
@@ -109,14 +109,14 @@ class LoginController extends CI_Controller {
         //$hash = $this->encrypt->sha1($password);
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-        $data = $this->Login->check($username);
+        $data = $this->Loginmod->check($username);
 
 
         if ($data != 0) {
           echo "Username already exists. Please try again.";
         }
         else {
-          $this->Login->register($username, $hash, $pwSalt, $salt);
+          $this->Loginmod->register($username, $hash, $pwSalt, $salt);
           redirect('Home/index', 'refresh');
         }
       }
