@@ -31,7 +31,7 @@
 			$points_possible = $_POST['pp'];
 			$username = $_POST['nn'];
 			
-		 	$this->Grades_model->newAssignment($ass_name, $ass_description, $username, $points_possible);
+		 	$this->Grades_model->newAssignment($ass_name, $ass_description, $username, $points_possible, $class_id);
 		 	$result = "success";
 		 	
 		 	return $result;
