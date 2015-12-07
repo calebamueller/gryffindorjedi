@@ -51,7 +51,8 @@
                           <button type="submit" class="btn btn-default" onclick="location.href='http://slateproject.me/gryffindorjedi/application/views/home.php'">Sign-in</button>
                         </form>
                         <div class="row col-xs-12" id="signup">
-                            <h3>Need an account?<br><a href="http://slateproject.me/gryffindorjedi/application/views/registration.php">Sign Up</a></h3>
+                          <h3>Need an account?<br><a href="http://slateproject.me/index.php/LoginController/register">Sign Up</a></h3>
+                          <!-- <h3>Need an account?<br><a href="registration.php">Sign Up</a></h3>-->
                         </div>
 
                     </div>
