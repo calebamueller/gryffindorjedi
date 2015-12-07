@@ -28,9 +28,11 @@ class Home extends CI_Controller {
       $data = json_decode(file_get_contents("php://input"));
       $id = $data->id;
       $announcement = $data->announcement;
+      echo $id;
+      echo $announcement;
       //$id = $_POST['id'];
-      $this->load->model('Classes');
-      $this->db->announce($id, $announcement);
+      //$this->load->model('Classes');
+      //$this->db->announce($id, $announcement);
        
     }
 }
