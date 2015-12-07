@@ -85,7 +85,7 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
     $location.path(path);
   };
   
-}
+});
 
 //app.controller('announceCtrl', function ($scope, $http, $location, IdService) {
 //  $scope.announce = function () {
