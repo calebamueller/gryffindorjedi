@@ -24,7 +24,9 @@ app.config(['$routeProvider', function($routeProvider) {
         .when("/", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
         .when("/home", {templateUrl: "application/ng/partials/default.php", controller: "PageCtrl"})
         .when("/class", {templateUrl: "application/ng/partials/class.php", controller: "PageCtrl"})
-        .when("/announcement", {templateUrl: "application/ng/partials/announcements.php", controller: "PageCtrl"});
+        .when("/announcement", {templateUrl: "application/ng/partials/announcements.php", controller: "PageCtrl"})
+        .when("/chat", {templateUrl: "application/ng/partials/chat.php"})
+        .when("/createAssignment", {templateUrl: "application/ng/partials/createAssignment.php"});
        
 }]);
 
@@ -76,6 +78,11 @@ app.controller('ClassCtrl', function ($scope, $http, $location, IdService) {
           $scope.classes = data;
           console.log(data);
         });
+  
+  $scope.go = function (path) {
+    $location.path(path);
+  };
+  
 });
 
 app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
@@ -111,9 +118,49 @@ app.controller('AnnounceCtrl', function ($scope, $http, $location, IdService) {
 //    .success(function(data){
 //    console.log(data);
 //  });
-//  $scope.go = function (path) {
-//    $location.path(path);
+    $scope.go = function (path) {
+    $location.path(path);
+  };
+  
+});
+
+app.controller('assignCtrl', function ($scope, $http, $location, IdService) {
+  $scope.master = {};
+  
+  $scope.update = function(ass) {
+    $scope.master = angular.copy(ass);
+//    $http.post('index.php/Home/announcements/')
+//    .success(function(response){
+//      console.log(response);
+//    });
+    var FormData = {
+      'name' : $scope.master.name,
+      'desc' : $scope.master.desc,
+      'pp' : $scope.master.pp
+    };
+    $http({
+      method: 'POST',
+      url: 'index.php/Grades_controller/newAssignment',
+      data: FormData,
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    })
+      .success(function(response) {
+        console.log(response);
+      });
+  };
+  
+//  $scope.getId = function() {
+//    var $id = IdService.getId();
+//    console.log('Announce'+$id);
 //  };
+  
+//  $http.post('index.php/Home/announcements/'+$id)
+//    .success(function(data){
+//    console.log(data);
+//  });
+    $scope.go = function (path) {
+    $location.path(path);
+  };
   
 });
 

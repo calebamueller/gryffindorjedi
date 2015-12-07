@@ -27,23 +27,28 @@
   		$this->load->model('Grades_model');
 			$this->load->view('displayResources');
 
-			//$cid = ($_POST['class_id']);
+			/*//$cid = ($_POST['class_id']);
 			$cid = 1;
 
 			$data = $this->Grades_model->returnAssignments($cid);
 
 			$data = json_encode($this)
 
-			return $data;
+			//return $data;*/
 		}
 
 		public function newAssignment()
 		{
 			$this->load->database();
-  		$this->load->model('Grades_model');
-  		$this->load->helper('form');
-			$this->load->view('addGrade');
+  			$this->load->model('Grades_model');
+  			$this->load->helper('form');
+			//$this->load->view('addGrade');
 
+            //$data = json_decode(file_get_contents("php://input"));
+            //$ass_name->$data->name;
+            //$description= $data->desc;
+            //$pointsPoss = $data->pp;
+          
 			$ass_name = ($_POST['name']);
  			$description = ($_POST['desc']);
  			$pointsPoss = ($_POST['pp']);

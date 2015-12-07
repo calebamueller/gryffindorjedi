@@ -79,11 +79,9 @@
                     <div ng-view></div>
                   </div>
                     <div class="col-sm-3" id="chat">
-                       <?php //include 'instant_messengr_files/index.html'?>
+                    <button ng-controller='PeopleCtrl' ng-click="go('/chat')">Chat</button>
                     </div>
-                    <div class="col-sm-12" id="timeline">
-                        Timeline
-                    </div>
+                    
                 </div>
             </div>
         </div>
