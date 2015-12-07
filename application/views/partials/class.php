@@ -2,7 +2,7 @@
   <div class="col-sm-6" id="left">
     <h2>Due</h2>
     <div class="col-sm-12" id="due">
-      <button ng-click=load()></button>
+<!--      <button ng-click=load()></button>-->
       <div ng-repeat="assignment in classes">
         <h3>{{assignment.assignments.ass_name}}<br></h3>
       </div>
