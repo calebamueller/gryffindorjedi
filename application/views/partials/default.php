@@ -5,8 +5,7 @@
             <div class="col-sm-4 item" id="item">
               
               <p>{{person.class1.class_name}}</p>
-              <p>{{person.class1.class_id}}</p>
-              <p>{{person.class1.instructor}}</p>            
+              <p>{{person.class1.instructor}}</p>    
               <p>{{person.class2.class_name}}</p>
               <p>{{person.class2.instructor}}</p>
               <p>{{person.class3.class_name}}</p>
