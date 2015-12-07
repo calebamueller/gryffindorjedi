@@ -79,7 +79,7 @@
                     <div ng-view></div>
                   </div>
                     <div class="col-sm-3" id="chat">
-                       <?php //include 'instant_messengr_files/index.html'?>
+                       <?php include 'instant_messengr_files/index.html'?>
                     </div>
                     <div class="col-sm-12" id="timeline">
                         Timeline
