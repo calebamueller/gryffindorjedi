@@ -23,7 +23,7 @@
 					var pointsPossible = $("#pointsPossible").val();
 					var nickname = $("#nickname").val();
     				
-					.ajax({
+					jquery.ajax({
 						type: "POST",
 						url: "<?php echo base_url(); ?>" + "/index.php/Grades_controller/newAssignment",
 						dataType: 'json',
