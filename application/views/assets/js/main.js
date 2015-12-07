@@ -27,13 +27,14 @@ app.config(['$routeProvider', function($routeProvider) {
        
 }]);
 
-app.service('IdService', [function($scope) {
+app.service('IdService', [function() {
+  var $classId = 0;
   this.setId = function($id){
-    $scope.classId = $id;
-    return $scope.classId;
+    $classId = $id;
+    return $classId;
   }
   this.getId = function() {
-    return $scope.classId;
+    return $classId;
   }
   var $dicks = 'Dicks'
   return $dicks;
@@ -54,7 +55,7 @@ app.controller('PeopleCtrl', function ($scope, $http, $location, IdService) {
   $scope.createUrl = function(event){
       console.log(event.target.id);
       $scope.id = event.target.id;
-      IdService.setId($scope.id);
+      IdService.setId(1);
   }
   
    $scope.go = function (path) {
