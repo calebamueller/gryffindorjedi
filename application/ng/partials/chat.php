@@ -50,6 +50,8 @@
     
     <script src = "https://cdn.socket.io/socket.io-1.2.0.js"></script>
 
+<!--<script src = 'node_modules/socket.io/></script>-->
+
 
     <script>
     	var socket = io();
