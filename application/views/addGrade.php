@@ -30,12 +30,12 @@
 			
 			
 		</script>
-			<input type="text" name="assignName" value="assignName"></input>
-			<input type="text" name="description" value="description"></input>
-			<input type="text" name="pointsPossible" value="points total"></input>
-			<input type="text" name="nickname" value="nickname">
+			<input type="text" id="assignName" name="assignName" value="assignName"></input>
+			<input type="text" id="description" name="description" value="description"></input>
+			<input type="text" id="pointsPossible" name="pointsPossible" value="points total"></input>
+			<input type="text" id="nickname" name="nickname" value="nickname">
 		
-			<input type="button" name="addAssignment" value="Add"></input>
+			<input type="button" id="addAssignment" name="addAssignment" value="Add"></input>
 			
 	</body>
 
