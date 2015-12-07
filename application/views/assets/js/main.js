@@ -41,13 +41,21 @@ app.controller('PeopleCtrl', function ($scope, $http) {
 });
 
 app.controller('ClassCtrl', function ($scope, $http, $location) {
-  $scope.showAlert = function(event){
-    console.log(event.target.id);
+    $scope.createUrl = function(event){
+      console.log(event.target.id);
+      $scope.id = event.target.id;
+      $http.get('index.php/home/getclass/'+$scope.id)
+        .success(function(data){
+        $scope.class = data;
+        console.log(data);
+      });
   }
   
   $scope.go = function (path) {
     $location.path(path);
   };
+  
+  $http.get('index.php/home/getClass/
   
 });
   
