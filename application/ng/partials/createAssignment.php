@@ -29,4 +29,6 @@
   </p>
   <?php //echo form_close(); ?>
   
+  <pre>classes.name</pre>
+  
 </div><!--<div class="reg_form">-->
