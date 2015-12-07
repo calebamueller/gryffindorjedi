@@ -32,7 +32,7 @@ app.service('IdService', [function($scope) {
     $scope.classId = $id;
     return $scope.classId;
   }
-  this.getId = function($id) {
+  this.getId = function() {
     return $scope.classId;
   }
   var $dicks = 'Dicks'
