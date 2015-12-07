@@ -16,7 +16,7 @@
               <p>{{person.class6.class_name}}</p> 
               <p>{{person.class6.instructor}}</p>
               
-              <button class='btn-default'>{{person.class1.class_name}}{{person.class2.class_name}}</button>
+              <button class='btn-default'>{{person.class1.class_name}}{{person.class2.class_name}}{{person.class3.class_name}}{{person.class4.class_name}}</button>
               
             </div>
           </div>
