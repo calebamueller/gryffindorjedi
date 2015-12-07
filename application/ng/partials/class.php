@@ -8,6 +8,7 @@
         <h3>  {{assignment.assignments.points_possible}}<br></h3>
         
       </div>
+      <button class='btn btn-default' ng-click="go('/createAssignment')">Create an Assignment</button>
     </div>
   </div>
   <div class="col-sm-6" id="center">
