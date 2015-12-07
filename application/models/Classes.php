@@ -9,7 +9,7 @@
     $array = array();
     $this->db->select('ass_name');
     $this->db->from('assignments');
-    $this->db->where($id = class_id);
+    $this->db->where($id = 'class_id');
     $query = $this->db->get();
     return $query->result();
   }
