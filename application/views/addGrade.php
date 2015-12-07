@@ -28,6 +28,8 @@
 					var nickname = $("#nickname").val();
     				var classID = $("#classID").val();
     				
+    				console.log(ass_name);
+    				
 					jQuery.ajax({
 						type: "POST",
 						url: "/index.php/Grades_controller/newAssignment",
