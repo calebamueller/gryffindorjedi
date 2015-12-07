@@ -1,4 +1,4 @@
-<?php class LoginModel extends CI_Model {
+<?php class Loginmod extends CI_Model {
 	//active record code igniter
 	public function __construct()
 	{
